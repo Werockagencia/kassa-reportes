@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14213D;--navy2:#1B2A4A;--blue:#2F6BE0;--red:#F2272C;--gold:#FFAA00;--ink:#0F172A;--paper:#F7F5F0}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#000;font-family:Montserrat,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.c{position:relative;overflow:hidden;display:none;color:#fff}
+.c.on{display:block}
+.f45{width:1080px;height:1350px}
+.f916{width:1080px;height:1920px}
+.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,33,61,0) 52%,rgba(20,33,61,.6) 70%,rgba(20,33,61,.95) 100%)}
+.shadeT{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,33,61,.6) 0%,rgba(20,33,61,0) 16%)}
+.ph{filter:saturate(1.08) contrast(1.04)}
+.logo{position:absolute;top:56px;left:64px;width:230px}
+.tag{position:absolute;top:64px;right:64px;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:1.5px solid rgba(255,255,255,.5);border-radius:40px;padding:12px 24px;font-weight:700;font-size:22px;letter-spacing:.06em;text-transform:uppercase}
+.bottom{position:absolute;left:64px;right:64px;bottom:72px}
+.kick{font-weight:700;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+h1{font-weight:900;font-size:84px;line-height:.98;letter-spacing:-.02em;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--gold)}
+h2{font-weight:800;font-size:64px;line-height:1.02;letter-spacing:-.015em}
+h2 em{font-style:normal;color:var(--gold)}
+.sub{font-weight:500;font-size:30px;line-height:1.35;margin-top:22px;color:#E6EBF5}
+.chips{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.chip{background:#fff;color:var(--navy);border-radius:14px;padding:14px 22px;font-weight:800;font-size:26px;display:flex;align-items:center;gap:10px}
+.chip b{color:var(--blue)}
+.chip.gold{background:var(--gold);color:var(--navy)}
+.dot{width:14px;height:14px;border-radius:50%;display:inline-block}
+.legal{position:absolute;left:64px;right:64px;bottom:26px;font-size:15px;color:rgba(255,255,255,.65);font-weight:500}
+.num{position:absolute;top:64px;right:64px;font-weight:800;font-size:24px;background:var(--gold);color:var(--navy);border-radius:40px;padding:10px 22px}
+.cta{display:inline-flex;align-items:center;gap:14px;background:var(--blue);color:#fff;border-radius:16px;padding:22px 34px;font-weight:800;font-size:30px;margin-top:34px}
+.real{position:absolute;top:150px;left:64px;display:flex;align-items:center;gap:10px;background:rgba(15,23,42,.6);border-radius:30px;padding:10px 20px;font-weight:700;font-size:20px;letter-spacing:.04em}
+.real i{width:12px;height:12px;border-radius:50%;background:#22C55E;display:inline-block}
+/* tipologias */
+.split{position:absolute;inset:0;display:flex;flex-direction:column}
+.split .top{position:relative;height:52%}
+.split .bot{flex:1;background:var(--navy);padding:56px 64px 0}
+.tipos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.tipo{background:#fff;color:var(--navy);border-radius:20px;padding:26px 22px}
+.tipo .m{font-weight:900;font-size:58px;letter-spacing:-.02em;line-height:1}
+.tipo .m small{font-size:28px}
+.tipo .d{font-weight:600;font-size:21px;margin-top:12px;line-height:1.3;color:#334155}
+.tipo .t{font-weight:800;font-size:18px;letter-spacing:.12em;color:var(--blue);text-transform:uppercase;margin-bottom:10px}
+.price{display:flex;align-items:baseline;gap:16px;margin-top:30px}
+.price .p{font-weight:900;font-size:72px;color:var(--gold);letter-spacing:-.02em}
+.price .l{font-weight:600;font-size:26px;color:#CBD5E1}
+/* familia */
+.trust{display:grid;gap:16px;margin-top:30px}
+.trust div{display:flex;gap:16px;align-items:center;font-weight:600;font-size:28px;color:#fff}
+.trust span{flex:none;width:44px;height:44px;border-radius:12px;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:900;font-size:24px}
+/* reel frames */
+.f916 .bottom{bottom:300px}
+.f916 h1{font-size:96px}
+.f916 .legal{bottom:230px}
+.f916 .logo{top:200px}
+.f916 .tag{top:208px}
+.f916 .real{top:300px}
+.big{position:absolute;left:64px;right:64px;top:50%;transform:translateY(-50%)}
+.cap{display:inline;background:#fff;color:var(--navy);font-weight:900;font-size:80px;line-height:1.28;padding:4px 16px;box-decoration-break:clone;-webkit-box-decoration-break:clone;text-transform:uppercase}
+.cap.g{background:var(--gold)}
+#B916 .tipo{padding:34px 32px}#B916 .tipo .m{font-size:80px;min-width:300px}#B916 .tipo .d{font-size:30px}#B916 .tipo .t{font-size:22px}#B916 .price .p{font-size:96px}#B916 .price .l{font-size:34px}
+</style></head><body>
+
+<!-- ============ AD A · CARRUSEL TOUR REAL (4:5) ============ -->
+<section class="c f45" id="A1">
+  <img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-3.jpg" style="object-position:40% 50%">
+  <div class="shadeT"></div><div class="shade"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="tag">Colina Campestre · Cl. 129</div>
+  <div class="real"><i></i>FOTO REAL · APARTAMENTO MODELO</div>
+  <div class="bottom">
+    <div class="kick">Desliza y recórrelo →</div>
+    <h1>Así se ve<br>tu próximo<br><em>hogar</em></h1>
+    <div class="chips"><div class="chip">45 a 59 m²</div><div class="chip gold">Desde $530M*</div></div>
+  </div>
+  <div class="legal">*Precio sujeto a disponibilidad y cambios sin previo aviso. Apartamento modelo con amoblamiento sugerido.</div>
+</section>
+
+<section class="c f45" id="A2">
+  <img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-1.jpg">
+  <div class="shadeT"></div><div class="shade"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="num">02 / 05</div>
+  <div class="bottom">
+    <div class="kick">Cocina</div>
+    <h2>Cocina abierta, integrada a la sala <em>y con vista.</em></h2>
+    <div class="chips"><div class="chip">Mesón en granito</div><div class="chip">Zona de ropas</div></div>
+  </div>
+  <div class="legal">Fotografía real del apartamento modelo. Acabados y amoblamiento sugeridos.</div>
+</section>
+
+<section class="c f45" id="A3">
+  <img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-31.jpg" style="object-position:40% 60%">
+  <div class="shadeT"></div><div class="shade"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="num">03 / 05</div>
+  <div class="bottom">
+    <div class="kick">Alcoba principal</div>
+    <h2>Con baño privado <em>y balcón.</em></h2>
+    <div class="chips"><div class="chip">2 alcobas</div><div class="chip">2 baños</div><div class="chip">Balcón</div></div>
+  </div>
+  <div class="legal">Fotografía real del apartamento modelo. Acabados y amoblamiento sugeridos.</div>
+</section>
+
+<section class="c f45" id="A4">
+  <img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-7.jpg">
+  <div class="shadeT"></div><div class="shade"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="num">04 / 05</div>
+  <div class="bottom">
+    <div class="kick">Segunda alcoba o estudio</div>
+    <h2>Un espacio que crece <em>con tu familia.</em></h2>
+    <div class="chips"><div class="chip">Tipos 1 · 2A · 2B · 3</div></div>
+  </div>
+  <div class="legal">Fotografía real del apartamento modelo. Acabados y amoblamiento sugeridos.</div>
+</section>
+
+<section class="c f45" id="A5">
+  <img class="ph" src="../../../assets/fotos-web/kassa129/terraza.jpg">
+  <div class="shadeT"></div><div class="shade" style="background:linear-gradient(180deg,rgba(20,33,61,0) 40%,rgba(20,33,61,.75) 60%,rgba(20,33,61,.97) 100%)"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="num">05 / 05</div>
+  <div class="bottom">
+    <div class="kick">Ven a conocerlo</div>
+    <h2>Gimnasio, coworking, BBQ y zona infantil. <em>Agenda tu visita.</em></h2>
+    <div class="chips"><div class="chip gold">Reserva con $5.000.000</div><div class="chip">Desde $530M*</div></div>
+    <div class="cta">Agendar visita al apto modelo →</div>
+  </div>
+  <div class="legal">*Precio sujeto a disponibilidad. Render ilustrativo de zonas comunes.</div>
+</section>
+
+<!-- ============ AD B · TIPOLOGÍAS (4:5 y 9:16) ============ -->
+<section class="c f45" id="B45">
+  <div class="split">
+    <div class="top"><img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-30.jpg"><div class="shadeT"></div>
+      <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png"><div class="real" style="top:auto;bottom:24px"><i></i>FOTO REAL · APARTAMENTO MODELO</div></div>
+    <div class="bot">
+      <div class="kick">Apartamentos NO VIS · Colina Campestre</div>
+      <h2>Elige el tamaño de tu <em>próximo hogar</em></h2>
+      <div class="tipos">
+        <div class="tipo"><div class="t">Tipo 3</div><div class="m">45<small>m²</small></div><div class="d">Alcoba con baño + estudio</div></div>
+        <div class="tipo"><div class="t">Tipo 2</div><div class="m">54–56<small>m²</small></div><div class="d">2 alcobas o alcoba + estudio</div></div>
+        <div class="tipo"><div class="t">Tipo 1</div><div class="m">58–59<small>m²</small></div><div class="d">2 alcobas · 2 baños</div></div>
+      </div>
+      <div class="price"><span class="l">Desde</span><span class="p">$530M*</span><span class="l">· Reserva con $5M</span></div>
+    </div>
+  </div>
+  <div class="legal" style="bottom:20px">*Precio sujeto a disponibilidad y tipología. Imágenes con amoblamiento sugerido.</div>
+</section>
+
+<section class="c f916" id="B916">
+  <div class="split">
+    <div class="top" style="height:40%"><img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-30.jpg"><div class="shadeT"></div>
+      <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png"><div class="real" style="top:auto;bottom:24px"><i></i>FOTO REAL · APARTAMENTO MODELO</div></div>
+    <div class="bot" style="padding-top:64px">
+      <div class="kick">Apartamentos NO VIS · Calle 129</div>
+      <h2 style="font-size:76px">Elige el tamaño de tu <em>próximo hogar</em></h2>
+      <div class="tipos" style="grid-template-columns:1fr;gap:16px">
+        <div class="tipo" style="display:flex;align-items:center;gap:26px"><div class="m">45<small>m²</small></div><div><div class="t">Tipo 3</div><div class="d" style="margin:0">Alcoba con baño + estudio</div></div></div>
+        <div class="tipo" style="display:flex;align-items:center;gap:26px"><div class="m">54–56<small>m²</small></div><div><div class="t">Tipo 2</div><div class="d" style="margin:0">2 alcobas o alcoba + estudio</div></div></div>
+        <div class="tipo" style="display:flex;align-items:center;gap:26px"><div class="m">58–59<small>m²</small></div><div><div class="t">Tipo 1</div><div class="d" style="margin:0">2 alcobas · 2 baños · balcón</div></div></div>
+      </div>
+      <div class="price"><span class="l">Desde</span><span class="p">$530M*</span></div>
+    </div>
+  </div>
+  <div class="legal" style="bottom:190px">*Precio sujeto a disponibilidad y tipología.</div>
+</section>
+
+<!-- ============ AD C · DECISIÓN EN FAMILIA (4:5 y 9:16) ============ -->
+<section class="c f45" id="C45">
+  <img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-4.jpg" style="object-position:50% 30%">
+  <div class="shadeT"></div><div class="shade" style="background:linear-gradient(180deg,rgba(20,33,61,0) 30%,rgba(20,33,61,.8) 52%,rgba(20,33,61,.97) 100%)"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="tag">Vivienda propia</div>
+  <div class="bottom">
+    <h2>Comprar vivienda se decide en familia. <em>Te acompañamos en cada paso.</em></h2>
+    <div class="trust">
+      <div><span>1</span>Asesoría para tu crédito con el banco que elijas</div>
+      <div><span>2</span>Recursos protegidos en fiducia · Credicorp Capital</div>
+      <div><span>3</span>Conoce el apartamento modelo antes de decidir</div>
+    </div>
+    <div class="cta">Agenda tu visita →</div>
+  </div>
+  <div class="legal">Proyecto NO VIS. Precios desde $530M* sujetos a disponibilidad.</div>
+</section>
+
+<section class="c f916" id="C916">
+  <img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-4.jpg" style="object-position:50% 30%">
+  <div class="shadeT"></div><div class="shade" style="background:linear-gradient(180deg,rgba(20,33,61,0) 34%,rgba(20,33,61,.82) 52%,rgba(20,33,61,.97) 100%)"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="tag">Vivienda propia</div>
+  <div class="bottom">
+    <h2 style="font-size:76px">Comprar vivienda se decide en familia. <em>Te acompañamos en cada paso.</em></h2>
+    <div class="trust">
+      <div><span>1</span>Asesoría para tu crédito con el banco que elijas</div>
+      <div><span>2</span>Recursos en fiducia · Credicorp Capital</div>
+      <div><span>3</span>Visita el apartamento modelo</div>
+    </div>
+    <div class="cta">Agenda tu visita →</div>
+  </div>
+  <div class="legal">Proyecto NO VIS. Precios desde $530M* sujetos a disponibilidad.</div>
+</section>
+
+<!-- ============ AD D · REEL 9:16 (frames para video) ============ -->
+<section class="c f916" id="D1">
+  <img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-3.jpg" style="object-position:38% 50%">
+  <div class="shadeT"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="big"><span class="cap">¿Buscas apartamento</span><br><span class="cap">en el norte</span><br><span class="cap g">de Bogotá?</span></div>
+</section>
+<section class="c f916" id="D2">
+  <img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-1.jpg" style="object-position:45% 50%">
+  <div class="shadeT"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="real"><i></i>FOTO REAL · APARTAMENTO MODELO</div>
+  <div class="big" style="top:auto;bottom:330px;transform:none"><span class="cap">Cocina abierta</span><br><span class="cap g">con vista</span></div>
+</section>
+<section class="c f916" id="D3">
+  <img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-8.jpg" style="object-position:30% 50%">
+  <div class="shadeT"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="big" style="top:auto;bottom:330px;transform:none"><span class="cap">2 alcobas · 2 baños</span><br><span class="cap g">y balcón</span></div>
+</section>
+<section class="c f916" id="D4">
+  <img class="ph" src="../../../assets/fotos-web/kassa129/terraza.jpg" style="object-position:50% 50%">
+  <div class="shadeT"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="big" style="top:auto;bottom:330px;transform:none"><span class="cap">Gym · Coworking</span><br><span class="cap">BBQ · Zona infantil</span></div>
+</section>
+<section class="c f916" id="D5">
+  <img class="ph" src="../../../assets/fotos-web/kassa129/drone.jpg" style="object-position:50% 50%">
+  <div class="shadeT"></div>
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
+  <div class="big" style="top:auto;bottom:330px;transform:none"><span class="cap">Calle 129</span><br><span class="cap g">A 10 min de todo</span></div>
+</section>
+<section class="c f916" id="D6" style="background:var(--navy)">
+  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="left:50%;transform:translateX(-50%);width:340px;top:330px">
+  <div class="big" style="text-align:center">
+    <div class="kick">Colina Campestre · Bogotá</div>
+    <h1 style="font-size:104px">Desde <em>$530M*</em></h1>
+    <div class="sub" style="font-size:38px">45 a 59 m² · Reserva con $5.000.000</div>
+    <div class="cta" style="font-size:38px;padding:28px 44px">Agenda tu visita →</div>
+  </div>
+  <div class="legal" style="text-align:center">*Precio sujeto a disponibilidad y cambios sin previo aviso.</div>
+</section>
+
+<script>
+const id=(location.hash||'#A1').slice(1);document.getElementById(id).classList.add('on');
+</script>
+</body></html>

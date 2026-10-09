@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kassa Reporte Quincenal</title>
+<style>
+:root{--bg:#EEF1F5;--paper:#fff;--ink:#0F172A;--mut:#64748B;--line:#E2E8F0;--card:#F3F4F6;--dark:#111827;--dark2:#1F2937;--e1:#1E5FA8;--e2:#D97706;--ok:#059669;--okbg:#ECFDF5;--warn:#B45309;--warnbg:#FEF9E7;--bad:#DC2626;--pur:#7C3AED}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B0F17}}
+:root[data-theme="dark"]{--bg:#0B0F17}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);font-family:Helvetica,Arial,sans-serif;color:var(--ink);font-size:13px;line-height:1.45}
+.page{width:794px;min-height:1123px;margin:24px auto;background:var(--paper);position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+@media screen and (max-width:830px){.page{width:auto;min-height:0;margin:12px 16px}.g4,.g3,.g2{grid-template-columns:1fr 1fr!important}.tbl{font-size:11px}}
+@page{size:794px 1123px;margin:0}@media print{body{background:#fff}.page{margin:0;box-shadow:none;height:1123px;min-height:0;page-break-after:always;break-after:page}.page:last-child{page-break-after:auto;break-after:auto}}
+.hd{background:var(--dark);color:#fff;padding:22px 52px;display:flex;align-items:center;gap:20px}
+.hd .lg{background:#fff;border-radius:4px;padding:8px 14px;width:124px}
+.hd h2{font-size:16px;letter-spacing:.02em}.hd p{color:#94A3B8;font-size:12px}
+.hd .pg{margin-left:auto;color:#94A3B8;font-size:11px}
+.bd{padding:22px 52px 70px}
+.ft{position:absolute;bottom:0;left:0;right:0;background:#F3F4F6;color:var(--mut);text-align:center;font-size:10px;padding:12px}
+.sec{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;margin:20px 0 12px}
+.sec:before{content:"";width:9px;height:26px;background:var(--ok)}
+.sec.b:before{background:var(--e1)}.sec.o:before{background:var(--e2)}.sec.p:before{background:var(--pur)}
+.sec:after{content:"";flex:1;height:1px;background:var(--line)}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.k{background:var(--card);border-radius:8px;padding:12px 14px;border-top:5px solid var(--ok)}
+.k.b{border-color:var(--e1)}.k.o{border-color:var(--e2)}.k.p{border-color:var(--pur)}.k.r{border-color:#E11D48}
+.k .l{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.03em}
+.k .v{font-size:22px;font-weight:700;margin:4px 0 2px}
+.k .s{font-size:10.5px;color:var(--mut)}
+.up{color:var(--ok);font-weight:700}.dn{color:var(--bad);font-weight:700}
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{background:var(--dark);color:#fff;padding:9px 8px;text-align:center;font-weight:700}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl td{padding:8px;border-bottom:1px solid var(--line);text-align:center}
+.tbl tr:nth-child(even) td{background:#F8FAFC}
+.tbl tr.t td{background:#D1FAE5;font-weight:700}
+.e1{color:var(--e1)}.e2{color:var(--e2)}
+.note{border-radius:8px;padding:12px 16px;font-size:12px;margin-top:12px}
+.note.ok{background:var(--okbg)}.note.ok b{color:var(--ok)}
+.note.w{background:var(--warnbg)}.note.w b{color:var(--warn)}
+.note.i{background:#EFF6FF}.note.i b{color:var(--e1)}
+.note.x{background:#FEF2F2}.note.x b{color:var(--bad)}
+.bar{height:22px;background:#E5E7EB;border-radius:12px;position:relative;overflow:hidden}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:12px}
+.brow{display:grid;grid-template-columns:150px 1fr 70px;gap:12px;align-items:center;margin:8px 0;font-size:12px;font-weight:700}
+.chart{background:var(--card);border-radius:8px;padding:14px}
+ul.ck{list-style:none}ul.ck li{padding:5px 0 5px 22px;position:relative;font-size:12.5px}ul.ck li:before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700}
+.step{display:flex;gap:12px;align-items:flex-start;margin:9px 0;font-size:12.5px}
+.step span{flex:none;width:24px;height:24px;border-radius:50%;background:var(--e1);color:#fff;display:grid;place-items:center;font-weight:700;font-size:11px}
+.hl{background:#D1FAE5;border-radius:8px;padding:11px 14px}.hl b{color:var(--ok);display:block;margin-bottom:3px}
+.op{background:var(--warnbg);border-left:6px solid var(--e2);border-radius:8px;padding:10px 14px;margin:8px 0}
+.op b{display:block}.op p{color:var(--mut);font-size:11.5px}
+.cv{background:var(--dark);color:#fff;min-height:1123px;padding:0}
+.cv .in{padding:250px 64px 0 88px;border-left:26px solid var(--ok);min-height:1123px;position:relative;background:linear-gradient(180deg,#1F2937 0,#1F2937 64%,#111827 64%)}
+.cv .lg{background:#fff;padding:22px 26px;width:244px}
+.cv .kk{color:var(--ok);font-weight:700;font-size:12px;margin-top:46px;letter-spacing:.03em}
+.cv h1{font-size:40px;margin-top:44px}
+.cv .per{color:#94A3B8;margin-top:22px;font-size:14px;padding-bottom:28px;border-bottom:1px solid var(--ok)}
+.cv .ks{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:110px}
+.cv .ks div{background:#1F2937;border-top:6px solid var(--ok);border-radius:8px;padding:12px}
+.cv .ks div:nth-child(2){border-color:#1E5FA8}.cv .ks div:nth-child(3){border-color:var(--e2)}.cv .ks div:nth-child(4){border-color:var(--pur)}
+.cv .ks small{color:#94A3B8;font-size:10px}.cv .ks b{display:block;font-size:20px;margin-top:6px}
+.cv .city{position:absolute;bottom:90px;left:88px;color:var(--ok);font-weight:700;font-size:12px}
+.cv .city span{display:block;color:#94A3B8;font-weight:400;font-size:11px;margin-top:10px}
+.crs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.crs img{width:100%;border-radius:6px;display:block}
+.cr2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.cr2 img{width:100%;border-radius:6px;display:block}
+.cap{font-size:10.5px;color:var(--mut);margin-top:4px}
+svg text{font-family:Helvetica,Arial,sans-serif}
+</style></head><body>
+
+<!-- 1 · PORTADA -->
+<section class="page cv"><div class="in">
+  <div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" alt="Kassa" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div>
+  <div class="kk">REPORTE DE MARKETING DIGITAL · QUINCENAL</div>
+  <h1>OCTUBRE 2026 · Q1</h1>
+  <div class="per">Período: 25 Sep – 8 Oct 2026 (14 días) &nbsp;|&nbsp; Acumulado: May – Oct 2026</div>
+  <div class="ks">
+    <div><small>LEADS QUINCENA</small><b>36</b></div>
+    <div><small>INVERSIÓN</small><b>$480.6K</b></div>
+    <div><small>CPL</small><b>$13.350</b></div>
+    <div><small>LEADS ACUM</small><b>469</b></div>
+  </div>
+  <div class="city">BOGOTÁ, COLOMBIA<span>Reporte de Marketing Digital · Generado el 9 de octubre de 2026</span></div>
+</div></section>
+
+<!-- 2 · RESUMEN -->
+<section class="page">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>RESUMEN DE LA QUINCENA</h2><p>25 Sep – 8 Oct 2026 · Ambas estrategias</p></div><div class="pg">2/7</div></div>
+  <div class="bd">
+    <div class="sec">Resultados clave</div>
+    <div class="g4">
+      <div class="k"><div class="l">Leads generados</div><div class="v">36</div><div class="s">E1: 19 · E2: 17</div></div>
+      <div class="k b"><div class="l">Inversión total</div><div class="v">$480.583</div><div class="s">COP en pauta (14 días)</div></div>
+      <div class="k o"><div class="l">Costo por lead</div><div class="v">$13.350</div><div class="s"><span class="up">↓ 44%</span> vs quincena anterior ($23.641)</div></div>
+      <div class="k p"><div class="l">Ritmo diario</div><div class="v">2,57</div><div class="s">leads/día con $34K/día</div></div>
+      <div class="k"><div class="l">Alcance</div><div class="v">4.394</div><div class="s">E1 2.426 · E2 1.968</div></div>
+      <div class="k b"><div class="l">Impresiones (est.)</div><div class="v">~6.934</div><div class="s">alcance × frecuencia</div></div>
+      <div class="k o"><div class="l">Frecuencia</div><div class="v">1,58</div><div class="s">Sin saturación (&lt;2,5)</div></div>
+      <div class="k p"><div class="l">Leads / $1M COP</div><div class="v">74,9</div><div class="s"><span class="up">+31%</span> vs acum. histórico (57,1)</div></div>
+    </div>
+
+    <div class="sec b">Resultado por estrategia</div>
+    <table class="tbl">
+      <tr><th>Estrategia</th><th>Leads</th><th>% total</th><th>Inversión</th><th>CPL</th><th>Alcance</th><th>Frec.</th><th>Leads/$1M</th></tr>
+      <tr><td class="e1"><b>E1 – Carrusel</b></td><td>19</td><td>53%</td><td>$201.647</td><td><b>$10.613</b></td><td>2.426</td><td>1,56</td><td>94,2</td></tr>
+      <tr><td class="e2"><b>E2 – Video</b></td><td>17</td><td>47%</td><td>$278.936</td><td><b>$16.408</b></td><td>1.968</td><td>1,60</td><td>60,9</td></tr>
+      <tr class="t"><td>TOTAL</td><td>36</td><td>100%</td><td>$480.583</td><td>$13.350</td><td>4.394</td><td>1,58</td><td>74,9</td></tr>
+    </table>
+
+    <div class="sec">Dos récords en la misma quincena</div>
+    <div class="g2">
+      <div class="hl"><b>E2: mejor CPL de su historia — $16.408</b>Supera su mejor mes (junio, $17.180) y baja 41% frente a la quincena anterior ($27.884). La estrategia que veníamos cuestionando ya está respondiendo.</div>
+      <div class="hl"><b>E1: mejor CPL desde mayo — $10.613</b>A solo $417 de su récord histórico ($10.196, mayo). 28% más eficiente que su promedio acumulado ($14.243).</div>
+    </div>
+    <div class="note ok"><b>Lectura:</b> con <b>45% menos inversión diaria</b> que en septiembre ($34K/día vs $62K/día) se mantuvo el <b>93% del volumen de leads</b> (2,57 vs 2,75 leads/día). Cada peso está rindiendo más: el algoritmo ya aprendió a quién mostrarle los anuncios.</div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Reporte quincenal · Confidencial</div>
+</section>
+
+<!-- 3 · EVOLUCIÓN -->
+<section class="page">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>EVOLUCIÓN QUINCENAL Y ACUMULADO</h2><p>Mayo – Octubre 2026</p></div><div class="pg">3/7</div></div>
+  <div class="bd">
+    <div class="sec">Acumulado total May – 8 Oct 2026</div>
+    <div class="g3">
+      <div class="k"><div class="l">Total leads</div><div class="v">469</div><div class="s">E1: 269 · E2: 200</div></div>
+      <div class="k b"><div class="l">Inversión acumulada</div><div class="v">$8.058.929</div><div class="s">COP en pauta</div></div>
+      <div class="k o"><div class="l">CPL promedio acum.</div><div class="v">$17.183</div><div class="s"><span class="up">↓ $320</span> vs corte 24 Sep ($17.503)</div></div>
+    </div>
+
+    <div class="sec b">CPL por quincena — la curva cambió de dirección</div>
+    <div class="chart">
+      <svg viewBox="0 0 690 250" width="100%" role="img" aria-label="CPL por quincena E1 y E2">
+        <g stroke="#E5E7EB"><line x1="60" y1="30" x2="670" y2="30"/><line x1="60" y1="85" x2="670" y2="85"/><line x1="60" y1="140" x2="670" y2="140"/><line x1="60" y1="195" x2="670" y2="195"/></g>
+        <g font-size="10" fill="#64748B" text-anchor="end"><text x="52" y="34">$32K</text><text x="52" y="89">$24K</text><text x="52" y="144">$16K</text><text x="52" y="199">$8K</text></g>
+        <!-- y = 250 - cpl/32000*220 approx: y(v)=30+(32000-v)/24000*165 -->
+        <polyline fill="none" stroke="#1E5FA8" stroke-width="3" points="160,147.2 365,118.3 570,175.7"/>
+        <polyline fill="none" stroke="#D97706" stroke-width="3" points="160,41.9 365,59.2 570,107.2"/>
+        <g font-size="11" font-weight="700">
+          <circle cx="160" cy="147.2" r="5" fill="#1E5FA8"/><text x="160" y="166" fill="#1E5FA8" text-anchor="middle">$14.720</text>
+          <circle cx="365" cy="118.3" r="5" fill="#1E5FA8"/><text x="365" y="137" fill="#1E5FA8" text-anchor="middle">$18.926</text>
+          <circle cx="570" cy="175.7" r="6" fill="#1E5FA8"/><text x="570" y="196" fill="#1E5FA8" text-anchor="middle">$10.613</text>
+          <circle cx="160" cy="41.9" r="5" fill="#D97706"/><text x="160" y="32" fill="#D97706" text-anchor="middle">$30.397</text>
+          <circle cx="365" cy="59.2" r="5" fill="#D97706"/><text x="365" y="49" fill="#D97706" text-anchor="middle">$27.884</text>
+          <circle cx="570" cy="107.2" r="6" fill="#D97706"/><text x="570" y="97" fill="#D97706" text-anchor="middle">$16.408</text>
+        </g>
+        <g font-size="11" fill="#0F172A" text-anchor="middle"><text x="160" y="225">1–9 Sep</text><text x="365" y="225">10–24 Sep</text><text x="570" y="225">25 Sep – 8 Oct</text></g>
+        <g font-size="11"><rect x="70" y="236" width="14" height="8" fill="#1E5FA8"/><text x="90" y="244">E1</text><rect x="130" y="236" width="14" height="8" fill="#D97706"/><text x="150" y="244">E2</text></g>
+      </svg>
+    </div>
+
+    <div class="sec o">Tabla por quincena</div>
+    <table class="tbl">
+      <tr><th>Quincena</th><th>Leads E1</th><th>CPL E1</th><th>Leads E2</th><th>CPL E2</th><th>Total leads</th><th>Inversión</th><th>CPL total</th></tr>
+      <tr><td>1–9 Sep (9 días)</td><td>16</td><td>$14.720</td><td>12</td><td>$30.397</td><td>28</td><td>$600K</td><td>$21.439</td></tr>
+      <tr><td>10–24 Sep (15 días)</td><td>18</td><td>$18.926</td><td>20</td><td>$27.884</td><td>38</td><td>$898K</td><td>$23.641</td></tr>
+      <tr class="t"><td>25 Sep–8 Oct (14 días)</td><td>19</td><td>$10.613</td><td>17</td><td>$16.408</td><td>36</td><td>$481K</td><td>$13.350</td></tr>
+    </table>
+    <div class="note i"><b>Histórico mensual (referencia):</b> May 118 · Jun 79 · Jul 77 · Ago 93 · Sep 66 (al 24) → 433 leads. Con esta quincena el proyecto supera los <b>469 leads</b> y E2 cruza los <b>200 leads acumulados</b>.</div>
+
+    <div class="sec p">Proyección octubre al ritmo actual</div>
+    <div class="g3">
+      <div class="k"><div class="l">Leads proyectados oct</div><div class="v">~80</div><div class="s">Meta: 80+ leads/mes ✓</div></div>
+      <div class="k b"><div class="l">Inversión proyectada</div><div class="v">~$1.06M</div><div class="s">vs $1.88M proyectado en sep</div></div>
+      <div class="k o"><div class="l">CPL esperado</div><div class="v">~$13.3K</div><div class="s">El más bajo desde abril</div></div>
+    </div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Reporte quincenal · Confidencial</div>
+</section>
+
+<!-- 4 · EFICIENCIA E1 vs E2 -->
+<section class="page">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>EFICIENCIA Y CALIDAD POR ESTRATEGIA</h2><p>Quincena vs acumulado histórico</p></div><div class="pg">4/7</div></div>
+  <div class="bd">
+    <div class="sec b">Leads por cada $1 millón invertido</div>
+    <div class="brow"><span class="e1">E1 quincena</span><div class="bar"><i style="width:94%;background:var(--e1)"></i></div><span>94,2</span></div>
+    <div class="brow"><span class="e1">E1 acumulado</span><div class="bar"><i style="width:70%;background:#93C5FD"></i></div><span>70,2</span></div>
+    <div class="brow"><span class="e2">E2 quincena</span><div class="bar"><i style="width:61%;background:var(--e2)"></i></div><span>60,9</span></div>
+    <div class="brow"><span class="e2">E2 acumulado</span><div class="bar"><i style="width:45.5%;background:#FCD34D"></i></div><span>45,5</span></div>
+    <div class="note ok"><b>Ambas estrategias mejoran en la misma proporción (+34%).</b> No es un efecto aislado de un anuncio: es la cuenta completa ganando eficiencia.</div>
+
+    <div class="sec o">Por qué E2 sigue siendo estratégica (aunque su CPL sea mayor)</div>
+    <table class="tbl">
+      <tr><th>Indicador de calidad (formularios)</th><th>E1</th><th>E2</th><th>Ventaja</th></tr>
+      <tr><td>Leads con ingresos familiares +$12M (acum.)</td><td>37,5%</td><td><b>51,2%</b></td><td class="e2"><b>E2</b></td></tr>
+      <tr><td>Leads con ingresos +$12M (Sep)</td><td>44%</td><td><b>53%</b></td><td class="e2"><b>E2</b></td></tr>
+      <tr><td>Buscan vivienda propia (Sep)</td><td>65%</td><td><b>84%</b></td><td class="e2"><b>E2</b></td></tr>
+      <tr><td>Conversión clic → lead (acum.)</td><td>12,7%</td><td><b>14,0%</b></td><td class="e2"><b>E2</b></td></tr>
+      <tr><td>CTR enlace (acum.)</td><td><b>2,59%</b></td><td>1,95%</td><td class="e1"><b>E1</b></td></tr>
+      <tr><td>CPM (acum.)</td><td><b>$46.846</b></td><td>$59.901</td><td class="e1"><b>E1</b></td></tr>
+    </table>
+    <div class="note w"><b>Diagnóstico:</b> E2 trae el lead de mejor perfil (más ingresos, más intención de vivienda propia y convierte mejor después del clic). Su problema está <b>arriba del embudo</b>: el video genera vistas e interacciones (5.196 en agosto) pero pocos clics, y paga un CPM 28% más caro. <b>La solución no es apagar E2, es cambiarle el creativo para que convierta la atención en clic.</b></div>
+
+    <div class="sec">Cálculo de valor: costo por lead calificado (+$12M)</div>
+    <div class="g2">
+      <div class="k b"><div class="l">E1 · CPL ajustado por calidad</div><div class="v">$28.301</div><div class="s">$10.613 ÷ 37,5% de leads +$12M</div></div>
+      <div class="k o"><div class="l">E2 · CPL ajustado por calidad</div><div class="v">$32.047</div><div class="s">$16.408 ÷ 51,2% de leads +$12M</div></div>
+    </div>
+    <div class="note i"><b>La brecha real entre estrategias es de solo 13%</b> cuando se mide por lead con capacidad de compra (antes de esta quincena era más del 50%). Con creativos nuevos, E2 puede igualar o superar a E1 en costo por lead calificado.</div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Reporte quincenal · Confidencial · Proporciones de calidad: formularios acumulados May–Sep</div>
+</section>
+
+<!-- 5 · NUEVA ESTRATEGIA CREATIVA E2 -->
+<section class="page">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>NUEVA ESTRATEGIA CREATIVA · E2</h2><p>De video de alcance a creativos de respuesta directa</p></div><div class="pg">5/7</div></div>
+  <div class="bd">
+    <div class="sec o">El planteamiento</div>
+    <p style="font-size:12.5px">E1 vende <b>la decisión y la ubicación</b> (renders, "Vivir bien es una decisión", "A 10 minutos de todo"). E2 va a vender <b>la prueba</b>: el apartamento modelo real, con fotos reales, metrajes claros y el acompañamiento para comprar. Mismos datos comerciales que E1 (desde $530M*, 45–59 m², reserva $5M) para no confundir al lead, pero otro ángulo para la audiencia de vivienda propia.</p>
+
+    <div class="sec">A · Carrusel "Recorre el apartamento modelo" (4:5)</div>
+    <div class="crs">
+      <img src="../../creativos/E2-nuevos/preview/E2-A-carrusel-01.jpg" alt="Carrusel 1"><img src="../../creativos/E2-nuevos/preview/E2-A-carrusel-02.jpg" alt="Carrusel 2"><img src="../../creativos/E2-nuevos/preview/E2-A-carrusel-03.jpg" alt="Carrusel 3"><img src="../../creativos/E2-nuevos/preview/E2-A-carrusel-04.jpg" alt="Carrusel 4"><img src="../../creativos/E2-nuevos/preview/E2-A-carrusel-05.jpg" alt="Carrusel 5">
+    </div>
+    <div class="cap">Hipótesis: el carrusel es el formato que mejor convierte en la cuenta (E1, CTR 2,59%). Fotos reales = confianza en compra sobre planos.</div>
+
+    <div class="sec">B · Tipologías &nbsp;·&nbsp; C · Decisión en familia &nbsp;·&nbsp; D · Reel 15s</div>
+    <div class="cr2">
+      <div><img src="../../creativos/E2-nuevos/preview/E2-B-tipologias-4x5.jpg" alt="Tipologías"><div class="cap"><b>B · Claridad:</b> metraje + precio en un vistazo. Filtra curiosos antes del formulario.</div></div>
+      <div><img src="../../creativos/E2-nuevos/preview/E2-C-familia-4x5.jpg" alt="Familia"><div class="cap"><b>C · Confianza:</b> crédito, fiducia Credicorp y visita. Habla a mujeres 35–44, segmento que mejor convierte.</div></div>
+      <div><img src="../../creativos/E2-nuevos/preview/_reel-frame-1.jpg" alt="Reel" style="aspect-ratio:4/5;object-fit:cover;object-position:50% 40%"><div class="cap"><b>D · Reel 9:16:</b> mantiene video en E2, pero con gancho en el segundo 1, texto sin sonido y cierre con precio + CTA.</div></div>
+    </div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Reporte quincenal · Confidencial</div>
+</section>
+
+<!-- 6 · PLAN DE MONTAJE + ALERTAS -->
+<section class="page">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>PLAN DE PRUEBA E2 Y ALERTAS</h2><p>Cómo medimos los nuevos creativos</p></div><div class="pg">6/7</div></div>
+  <div class="bd">
+    <div class="sec o">Montaje propuesto (14 días)</div>
+    <table class="tbl">
+      <tr><th>Elemento</th><th>Decisión</th></tr>
+      <tr><td>Campaña</td><td>Se mantiene "Kassa | Lead Ads | Estrategia 2" (conserva el aprendizaje del algoritmo)</td></tr>
+      <tr><td>Anuncios</td><td>4 nuevos: A carrusel, B tipologías, C familia, D reel. El video actual queda activo como control</td></tr>
+      <tr><td>Ubicaciones</td><td>Feed IG/FB (4:5) + Stories/Reels (9:16). Instagram aporta el 74% de los leads</td></tr>
+      <tr><td>Formulario</td><td>Mismo formulario (pregunta de ingresos +/- $12M). Recomendado: tipo "Mayor intención"</td></tr>
+      <tr><td>Presupuesto</td><td>Igual al actual. No subir hasta tener ganador (evita reiniciar aprendizaje)</td></tr>
+      <tr><td>Regla de corte</td><td>Anuncio con más de $50K gastados y 0 leads, o CPL &gt; $25K tras $75K → se pausa</td></tr>
+      <tr><td>Meta del test</td><td>E2 con CPL ≤ $14.000 y ≥ 50% de leads con ingresos +$12M</td></tr>
+    </table>
+
+    <div class="sec">Alertas de consistencia (requieren acción del cliente)</div>
+    <div class="note x"><b>1 · Precio:</b> la web kassaapartamentos.com dice <b>"Desde $356 M COP"</b> y los anuncios dicen <b>"desde $530 millones*"</b>. Un lead que ve ambos precios desconfía o llega con una expectativa equivocada al asesor. Hay que unificar.</div>
+    <div class="note x"><b>2 · Separación:</b> la web dice reservar con <b>$3.000.000</b>; el carrusel de E1 dice <b>$5.000.000</b>. Los creativos nuevos usan $5M (igual que E1) hasta que el cliente confirme.</div>
+    <div class="note w"><b>3 · Velocidad de contacto:</b> en lead ads el contacto en los primeros 5 minutos multiplica la tasa de cita. Proponemos medir con el equipo comercial cuántos leads de la quincena fueron contactados y agendaron visita, para cerrar el ciclo pauta → venta.</div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Reporte quincenal · Confidencial</div>
+</section>
+
+<!-- 7 · CONCLUSIONES -->
+<section class="page">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>CONCLUSIONES Y PRÓXIMOS PASOS</h2><p>Quincena 25 Sep – 8 Oct 2026</p></div><div class="pg">7/7</div></div>
+  <div class="bd">
+    <div class="sec">Resumen ejecutivo</div>
+    <div class="chart"><ul class="ck">
+      <li>36 leads en 14 días a un CPL de <b>$13.350</b>: 44% más barato que la quincena anterior.</li>
+      <li><b>E2 marca su mejor CPL histórico ($16.408)</b> y E1 el mejor desde mayo ($10.613).</li>
+      <li>Con 45% menos inversión diaria se sostuvo el 93% del volumen de leads.</li>
+      <li>Acumulado May–Oct: <b>469 leads</b> con $8,06M invertidos (CPL $17.183, bajando).</li>
+      <li>Al ritmo actual octubre cierra en ~80 leads con ~$1,06M: la meta de 80 leads/mes con menos presupuesto.</li>
+    </ul></div>
+
+    <div class="sec b">Puntos destacados</div>
+    <div class="g2">
+      <div class="hl"><b>✓ E2 se recuperó</b>De $30K (inicio sep) a $16K. La mejor base para lanzar creativos nuevos.</div>
+      <div class="hl"><b>✓ Frecuencia sana (1,58)</b>La audiencia no está saturada: hay espacio para más volumen.</div>
+      <div class="hl"><b>✓ E1 sigue siendo el motor</b>94 leads por cada millón invertido, se mantiene sin cambios.</div>
+      <div class="hl"><b>✓ Calidad de E2</b>51% de sus leads declara ingresos +$12M: el perfil que cierra.</div>
+    </div>
+
+    <div class="sec o">Próximos pasos</div>
+    <div class="step"><span>1</span>Lanzar los 4 creativos nuevos en E2 (carrusel, tipologías, familia, reel) con el video actual como control.</div>
+    <div class="step"><span>2</span>Mantener E1 sin cambios: es la estrategia más eficiente del portafolio.</div>
+    <div class="step"><span>3</span>Unificar precio y valor de separación entre web y anuncios ($356M vs $530M · $3M vs $5M).</div>
+    <div class="step"><span>4</span>Pedir al equipo comercial el estado de los leads (contactado / visita / separación) para medir costo por visita.</div>
+    <div class="step"><span>5</span>Próximo reporte: <b>24 de octubre</b> con el primer ganador del test de E2.</div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Bogotá, Colombia · Reporte generado el 9 de octubre de 2026</div>
+</section>
+</body></html>
