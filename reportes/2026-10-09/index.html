@@ -65,6 +65,16 @@ ul.ck{list-style:none}ul.ck li{padding:5px 0 5px 22px;position:relative;font-siz
 .cr2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.cr2 img{width:100%;border-radius:6px;display:block}
 .cap{font-size:10.5px;color:var(--mut);margin-top:4px}
 svg text{font-family:Helvetica,Arial,sans-serif}
+
+.scr{} @media print{.scr{display:none!important}}
+.gal{display:grid;gap:12px}.gal.g5{grid-template-columns:repeat(5,1fr)}.gal.g2b{grid-template-columns:repeat(2,minmax(0,260px))}
+.gal figure{margin:0;background:var(--card);border-radius:8px;padding:6px;cursor:zoom-in}
+.gal img,.gal video{width:100%;display:block;border-radius:5px}
+.gal figcaption{font-size:11px;font-weight:700;padding:6px 2px 2px}.gal figcaption small{display:block;font-weight:400;color:var(--mut)}
+#galeria{min-height:0}#galeria .bd{padding-bottom:70px}
+.hint{display:inline-block;background:#ECFDF5;color:var(--ok);font-weight:700;font-size:11px;border-radius:20px;padding:4px 10px;margin-left:8px}
+.fab{position:fixed;right:16px;bottom:16px;background:#059669;color:#fff;text-decoration:none;font:700 14px Helvetica,Arial,sans-serif;padding:12px 18px;border-radius:30px;box-shadow:0 6px 20px rgba(0,0,0,.3);z-index:50}
+@media screen and (max-width:830px){.gal.g5{grid-template-columns:repeat(2,1fr)}.gal.g2b{grid-template-columns:1fr 1fr}}
 </style></head><body>
 
 <!-- 1 · PORTADA -->
@@ -207,17 +217,17 @@ svg text{font-family:Helvetica,Arial,sans-serif}
     <div class="sec o">El planteamiento</div>
     <p style="font-size:12.5px">E1 vende <b>la decisión y la ubicación</b> (renders, "Vivir bien es una decisión", "A 10 minutos de todo"). E2 va a vender <b>la prueba</b>: el apartamento modelo real, con fotos reales, metrajes claros y el acompañamiento para comprar. Mismos datos comerciales que E1 (desde $530M*, 45–59 m², reserva $5M) para no confundir al lead, pero otro ángulo para la audiencia de vivienda propia.</p>
 
-    <div class="sec">A · Carrusel "Recorre el apartamento modelo" (4:5)</div>
+    <div class="sec">A · Carrusel "Recorre el apartamento modelo" (4:5)<span class="hint scr">Toca para ver en HD</span></div>
     <div class="crs">
-      <img src="../../creativos/E2-nuevos/preview/E2-A-carrusel-01.jpg" alt="Carrusel 1"><img src="../../creativos/E2-nuevos/preview/E2-A-carrusel-02.jpg" alt="Carrusel 2"><img src="../../creativos/E2-nuevos/preview/E2-A-carrusel-03.jpg" alt="Carrusel 3"><img src="../../creativos/E2-nuevos/preview/E2-A-carrusel-04.jpg" alt="Carrusel 4"><img src="../../creativos/E2-nuevos/preview/E2-A-carrusel-05.jpg" alt="Carrusel 5">
+      <img data-hd="../../creativos/E2-nuevos/png/E2-A-carrusel-01.png" data-title="A · Carrusel — tarjeta 1/5" data-size="1080×1350 · PNG" src="../../creativos/E2-nuevos/preview/E2-A-carrusel-01.jpg" alt="Carrusel 1"><img data-hd="../../creativos/E2-nuevos/png/E2-A-carrusel-02.png" data-title="A · Carrusel — tarjeta 2/5" data-size="1080×1350 · PNG" src="../../creativos/E2-nuevos/preview/E2-A-carrusel-02.jpg" alt="Carrusel 2"><img data-hd="../../creativos/E2-nuevos/png/E2-A-carrusel-03.png" data-title="A · Carrusel — tarjeta 3/5" data-size="1080×1350 · PNG" src="../../creativos/E2-nuevos/preview/E2-A-carrusel-03.jpg" alt="Carrusel 3"><img data-hd="../../creativos/E2-nuevos/png/E2-A-carrusel-04.png" data-title="A · Carrusel — tarjeta 4/5" data-size="1080×1350 · PNG" src="../../creativos/E2-nuevos/preview/E2-A-carrusel-04.jpg" alt="Carrusel 4"><img data-hd="../../creativos/E2-nuevos/png/E2-A-carrusel-05.png" data-title="A · Carrusel — tarjeta 5/5" data-size="1080×1350 · PNG" src="../../creativos/E2-nuevos/preview/E2-A-carrusel-05.jpg" alt="Carrusel 5">
     </div>
     <div class="cap">Hipótesis: el carrusel es el formato que mejor convierte en la cuenta (E1, CTR 2,59%). Fotos reales = confianza en compra sobre planos.</div>
 
     <div class="sec">B · Tipologías &nbsp;·&nbsp; C · Decisión en familia &nbsp;·&nbsp; D · Reel 15s</div>
     <div class="cr2">
-      <div><img src="../../creativos/E2-nuevos/preview/E2-B-tipologias-4x5.jpg" alt="Tipologías"><div class="cap"><b>B · Claridad:</b> metraje + precio en un vistazo. Filtra curiosos antes del formulario.</div></div>
-      <div><img src="../../creativos/E2-nuevos/preview/E2-C-familia-4x5.jpg" alt="Familia"><div class="cap"><b>C · Confianza:</b> crédito, fiducia Credicorp y visita. Habla a mujeres 35–44, segmento que mejor convierte.</div></div>
-      <div><img src="../../creativos/E2-nuevos/preview/_reel-frame-1.jpg" alt="Reel" style="aspect-ratio:4/5;object-fit:cover;object-position:50% 40%"><div class="cap"><b>D · Reel 9:16:</b> mantiene video en E2, pero con gancho en el segundo 1, texto sin sonido y cierre con precio + CTA.</div></div>
+      <div><img data-hd="../../creativos/E2-nuevos/png/E2-B-tipologias-4x5.png" data-title="B · Tipologías — Feed" data-size="1080×1350 · PNG" src="../../creativos/E2-nuevos/preview/E2-B-tipologias-4x5.jpg" alt="Tipologías"><div class="cap"><b>B · Claridad:</b> metraje + precio en un vistazo. Filtra curiosos antes del formulario.</div></div>
+      <div><img data-hd="../../creativos/E2-nuevos/png/E2-C-familia-4x5.png" data-title="C · Decisión en familia — Feed" data-size="1080×1350 · PNG" src="../../creativos/E2-nuevos/preview/E2-C-familia-4x5.jpg" alt="Familia"><div class="cap"><b>C · Confianza:</b> crédito, fiducia Credicorp y visita. Habla a mujeres 35–44, segmento que mejor convierte.</div></div>
+      <div><img data-hd="../../creativos/E2-nuevos/png/E2-D-reel-9x16.mp4" data-title="D · Reel 9:16 (12 s)" data-size="1080×1920 · MP4" src="../../creativos/E2-nuevos/preview/_reel-frame-1.jpg" alt="Reel" style="aspect-ratio:4/5;object-fit:cover;object-position:50% 40%"><div class="cap"><b>D · Reel 9:16:</b> mantiene video en E2, pero con gancho en el segundo 1, texto sin sonido y cierre con precio + CTA.</div></div>
     </div>
   </div>
   <div class="ft">Kassa Apartamentos · Reporte quincenal · Confidencial</div>
@@ -277,4 +287,22 @@ svg text{font-family:Helvetica,Arial,sans-serif}
   </div>
   <div class="ft">Kassa Apartamentos · Bogotá, Colombia · Reporte generado el 9 de octubre de 2026</div>
 </section>
+
+<!-- GALERÍA HD (solo pantalla) -->
+<section class="page scr" id="galeria">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>GALERÍA DE CREATIVOS E2 · HD</h2><p>Toca cualquier pieza para verla en alta resolución, hacer zoom y descargarla</p></div></div>
+  <div class="bd">
+    <div class="sec o">A · Carrusel "Recorre el apartamento modelo" · Feed 4:5</div>
+    <div class="gal g5"><figure data-hd="../../creativos/E2-nuevos/png/E2-A-carrusel-01.png" data-title="A · Tarjeta 1/5" data-size="1080×1350"><img src="../../creativos/E2-nuevos/png/E2-A-carrusel-01.png" loading="lazy" alt="A · Tarjeta 1/5"><figcaption>A · Tarjeta 1/5<small>1080×1350</small></figcaption></figure><figure data-hd="../../creativos/E2-nuevos/png/E2-A-carrusel-02.png" data-title="A · Tarjeta 2/5" data-size="1080×1350"><img src="../../creativos/E2-nuevos/png/E2-A-carrusel-02.png" loading="lazy" alt="A · Tarjeta 2/5"><figcaption>A · Tarjeta 2/5<small>1080×1350</small></figcaption></figure><figure data-hd="../../creativos/E2-nuevos/png/E2-A-carrusel-03.png" data-title="A · Tarjeta 3/5" data-size="1080×1350"><img src="../../creativos/E2-nuevos/png/E2-A-carrusel-03.png" loading="lazy" alt="A · Tarjeta 3/5"><figcaption>A · Tarjeta 3/5<small>1080×1350</small></figcaption></figure><figure data-hd="../../creativos/E2-nuevos/png/E2-A-carrusel-04.png" data-title="A · Tarjeta 4/5" data-size="1080×1350"><img src="../../creativos/E2-nuevos/png/E2-A-carrusel-04.png" loading="lazy" alt="A · Tarjeta 4/5"><figcaption>A · Tarjeta 4/5<small>1080×1350</small></figcaption></figure><figure data-hd="../../creativos/E2-nuevos/png/E2-A-carrusel-05.png" data-title="A · Tarjeta 5/5" data-size="1080×1350"><img src="../../creativos/E2-nuevos/png/E2-A-carrusel-05.png" loading="lazy" alt="A · Tarjeta 5/5"><figcaption>A · Tarjeta 5/5<small>1080×1350</small></figcaption></figure></div>
+    <div class="sec">B · Tipologías</div>
+    <div class="gal g2b"><figure data-hd="../../creativos/E2-nuevos/png/E2-B-tipologias-4x5.png" data-title="B · Feed 4:5" data-size="1080×1350"><img src="../../creativos/E2-nuevos/png/E2-B-tipologias-4x5.png" loading="lazy" alt="B · Feed 4:5"><figcaption>B · Feed 4:5<small>1080×1350</small></figcaption></figure><figure data-hd="../../creativos/E2-nuevos/png/E2-B-tipologias-9x16.png" data-title="B · Historias/Reels 9:16" data-size="1080×1920"><img src="../../creativos/E2-nuevos/png/E2-B-tipologias-9x16.png" loading="lazy" alt="B · Historias/Reels 9:16"><figcaption>B · Historias/Reels 9:16<small>1080×1920</small></figcaption></figure></div>
+    <div class="sec b">C · Decisión en familia</div>
+    <div class="gal g2b"><figure data-hd="../../creativos/E2-nuevos/png/E2-C-familia-4x5.png" data-title="C · Feed 4:5" data-size="1080×1350"><img src="../../creativos/E2-nuevos/png/E2-C-familia-4x5.png" loading="lazy" alt="C · Feed 4:5"><figcaption>C · Feed 4:5<small>1080×1350</small></figcaption></figure><figure data-hd="../../creativos/E2-nuevos/png/E2-C-familia-9x16.png" data-title="C · Historias/Reels 9:16" data-size="1080×1920"><img src="../../creativos/E2-nuevos/png/E2-C-familia-9x16.png" loading="lazy" alt="C · Historias/Reels 9:16"><figcaption>C · Historias/Reels 9:16<small>1080×1920</small></figcaption></figure></div>
+    <div class="sec p">D · Reel 12 s · 9:16</div>
+    <div class="gal g2b"><figure data-hd="../../creativos/E2-nuevos/png/E2-D-reel-9x16.mp4" data-title="D · Reel 9:16 (12 s)" data-size="1080×1920 · MP4"><video src="../../creativos/E2-nuevos/png/E2-D-reel-9x16.mp4" muted loop autoplay playsinline></video><figcaption>D · Reel — toca para verlo grande<small>1080×1920 · MP4</small></figcaption></figure></div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Creativos Estrategia 2 · Octubre 2026</div>
+</section>
+<a class="fab scr" href="#galeria">🔍 Ver creativos en HD</a>
+<script src="../../assets/lightbox.js"></script>
 </body></html>
