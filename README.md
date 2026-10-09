@@ -1,7 +1,6 @@
 # Kassa Apartamentos · Reportes quincenales y creativos
 
 Cliente: **KASSA Apartamentos**, Calle 129 # 57-22, Colina Campestre, Bogotá · Agencia: We Rock
-Meta Ads: cuenta `129819239812443` · Business `733023785166742`
 
 ## Cadencia: cada 15 días
 | Corte | Período | Carpeta |
