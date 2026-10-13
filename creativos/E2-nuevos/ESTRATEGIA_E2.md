@@ -102,7 +102,7 @@
 - Ubicaciones: **solo Instagram** (feed, historias y reels). En E2, Facebook costó $36.647 por lead en septiembre y $35.639 en octubre.
 - Audiencia: **excluir 55–64 años**. El núcleo que convierte son mujeres de 35 a 54 años (73–78% de los leads son mujeres).
 - Tipología: **el Tipo 3 (45 m²) ya no está disponible**; las piezas comunican 54–59 m² (Tipo 1 y Tipo 2).
-- Pieza C: montaje con pareja de stock (Unsplash, Omar Lopez, licencia libre), marcada "Imagen de referencia".
+- Pieza C: montaje con pareja de stock (Unsplash, Elissa Garcia, licencia libre), marcada "Imagen de referencia".
 
 ### Nicho nuevo: sector salud
 Kassa está cerca de **Clínica Reina Sofía, Clínica La Colina y Colmédica** (fuente: kassa129.com). Su personal (médicos, enfermería, administrativos) es una audiencia natural: vive cerca de su trabajo, tiene ingresos estables y suele calificar para crédito.
