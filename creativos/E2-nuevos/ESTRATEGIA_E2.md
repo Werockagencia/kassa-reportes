@@ -18,7 +18,7 @@
 
 - **E1** (no se toca): renders, ubicación, "Vivir bien es una decisión", "A 10 minutos de todo".
 - **E2**: **fotos reales del apartamento modelo**, metrajes claros y acompañamiento para comprar. Para un comprador de vivienda propia que compra sobre planos, la prueba visual reduce el riesgo que percibe.
-- **Datos comerciales iguales a E1** para no confundir al lead: desde $530M*, 45–59 m², reserva con $5.000.000.
+- **Datos comerciales iguales a E1** para no confundir al lead: desde $530M*, 54–59 m², reserva con $5.000.000.
 
 ## Los 4 anuncios
 
@@ -36,7 +36,7 @@
 **Texto principal:**
 > Así se ve tu próximo hogar en Colina Campestre 🏡 Fotos reales de nuestro apartamento modelo: cocina abierta con vista, alcoba principal con baño privado y balcón, y espacios que crecen con tu familia.
 >
-> 📐 Apartamentos de 45 a 59 m²
+> 📐 Apartamentos de 54 a 59 m²
 > 💰 Desde $530 millones* · Reserva con $5.000.000
 > 📍 Calle 129 # 57-22, a 10 minutos de todo
 >
@@ -48,8 +48,7 @@
 ### B · Tipologías
 **Texto principal:**
 > ¿Cuántos metros necesitas? En KASSA eliges:
-> ▪️ 45 m² · Alcoba con baño + estudio
-> ▪️ 54–56 m² · 2 alcobas o alcoba + estudio
+> ▪️ 54–56 m² · 2 alcobas, o alcoba con baño + estudio
 > ▪️ 58–59 m² · 2 alcobas y 2 baños
 >
 > Todos con balcón, gimnasio, coworking, BBQ y zona infantil. Desde $530 millones*.
@@ -64,14 +63,14 @@
 > ✅ Recursos protegidos en fiducia con Credicorp Capital
 > ✅ Visita al apartamento modelo antes de decidir
 >
-> Apartamentos de 45 a 59 m² en Colina Campestre, desde $530 millones*.
+> Apartamentos de 54 a 59 m² en Colina Campestre, desde $530 millones*.
 > 👉 Agenda tu visita.
 
 **Título:** Te acompañamos en cada paso · **CTA:** Más información
 
 ### D · Reel
 **Texto principal:**
-> ¿Buscas apartamento en el norte de Bogotá? 👀 Mira cómo se ve KASSA por dentro: fotos reales de nuestro apartamento modelo en Colina Campestre. Desde $530M* · 45 a 59 m² · Reserva con $5M. 👉 Agenda tu visita.
+> ¿Buscas apartamento en el norte de Bogotá? 👀 Mira cómo se ve KASSA por dentro: fotos reales de nuestro apartamento modelo en Colina Campestre. Desde $530M* · 54 a 59 m² · Reserva con $5M. 👉 Agenda tu visita.
 
 **Título:** Conoce el apartamento modelo · **CTA:** Más información
 

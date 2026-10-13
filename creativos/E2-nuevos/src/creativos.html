@@ -36,7 +36,7 @@ h2 em{font-style:normal;color:var(--gold)}
 .split{position:absolute;inset:0;display:flex;flex-direction:column}
 .split .top{position:relative;height:52%}
 .split .bot{flex:1;background:var(--navy);padding:56px 64px 0}
-.tipos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.tipos{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}
 .tipo{background:#fff;color:var(--navy);border-radius:20px;padding:26px 22px}
 .tipo .m{font-weight:900;font-size:58px;letter-spacing:-.02em;line-height:1}
 .tipo .m small{font-size:28px}
@@ -59,6 +59,7 @@ h2 em{font-style:normal;color:var(--gold)}
 .big{position:absolute;left:64px;right:64px;top:50%;transform:translateY(-50%)}
 .cap{display:inline;background:#fff;color:var(--navy);font-weight:900;font-size:80px;line-height:1.28;padding:4px 16px;box-decoration-break:clone;-webkit-box-decoration-break:clone;text-transform:uppercase}
 .cap.g{background:var(--gold)}
+#C916 .trust div{font-size:36px}#C916 .trust span{width:54px;height:54px;font-size:28px}#C916 .cta{font-size:38px;padding:28px 44px;margin-top:44px}#C916 .trust{gap:22px;margin-top:40px}
 #B916 .tipo{padding:34px 32px}#B916 .tipo .m{font-size:80px;min-width:300px}#B916 .tipo .d{font-size:30px}#B916 .tipo .t{font-size:22px}#B916 .price .p{font-size:96px}#B916 .price .l{font-size:34px}
 </style></head><body>
 
@@ -72,7 +73,7 @@ h2 em{font-style:normal;color:var(--gold)}
   <div class="bottom">
     <div class="kick">Desliza y recórrelo →</div>
     <h1>Así se ve<br>tu próximo<br><em>hogar</em></h1>
-    <div class="chips"><div class="chip">45 a 59 m²</div><div class="chip gold">Desde $530M*</div></div>
+    <div class="chips"><div class="chip">54 a 59 m²</div><div class="chip gold">Desde $530M*</div></div>
   </div>
   <div class="legal">*Precio sujeto a disponibilidad y cambios sin previo aviso. Apartamento modelo con amoblamiento sugerido.</div>
 </section>
@@ -111,7 +112,7 @@ h2 em{font-style:normal;color:var(--gold)}
   <div class="bottom">
     <div class="kick">Segunda alcoba o estudio</div>
     <h2>Un espacio que crece <em>con tu familia.</em></h2>
-    <div class="chips"><div class="chip">Tipos 1 · 2A · 2B · 3</div></div>
+    <div class="chips"><div class="chip">Tipos 1 · 2A · 2B</div></div>
   </div>
   <div class="legal">Fotografía real del apartamento modelo. Acabados y amoblamiento sugeridos.</div>
 </section>
@@ -139,9 +140,8 @@ h2 em{font-style:normal;color:var(--gold)}
       <div class="kick">Apartamentos NO VIS · Colina Campestre</div>
       <h2>Elige el tamaño de tu <em>próximo hogar</em></h2>
       <div class="tipos">
-        <div class="tipo"><div class="t">Tipo 3</div><div class="m">45<small>m²</small></div><div class="d">Alcoba con baño + estudio</div></div>
-        <div class="tipo"><div class="t">Tipo 2</div><div class="m">54–56<small>m²</small></div><div class="d">2 alcobas o alcoba + estudio</div></div>
-        <div class="tipo"><div class="t">Tipo 1</div><div class="m">58–59<small>m²</small></div><div class="d">2 alcobas · 2 baños</div></div>
+        <div class="tipo"><div class="t">Tipo 2 · 2A y 2B</div><div class="m">54–56<small>m²</small></div><div class="d">2 alcobas, o alcoba con baño + estudio · balcón</div></div>
+        <div class="tipo"><div class="t">Tipo 1</div><div class="m">58–59<small>m²</small></div><div class="d">2 alcobas · 2 baños · balcón</div></div>
       </div>
       <div class="price"><span class="l">Desde</span><span class="p">$530M*</span><span class="l">· Reserva con $5M</span></div>
     </div>
@@ -157,7 +157,6 @@ h2 em{font-style:normal;color:var(--gold)}
       <div class="kick">Apartamentos NO VIS · Calle 129</div>
       <h2 style="font-size:76px">Elige el tamaño de tu <em>próximo hogar</em></h2>
       <div class="tipos" style="grid-template-columns:1fr;gap:16px">
-        <div class="tipo" style="display:flex;align-items:center;gap:26px"><div class="m">45<small>m²</small></div><div><div class="t">Tipo 3</div><div class="d" style="margin:0">Alcoba con baño + estudio</div></div></div>
         <div class="tipo" style="display:flex;align-items:center;gap:26px"><div class="m">54–56<small>m²</small></div><div><div class="t">Tipo 2</div><div class="d" style="margin:0">2 alcobas o alcoba + estudio</div></div></div>
         <div class="tipo" style="display:flex;align-items:center;gap:26px"><div class="m">58–59<small>m²</small></div><div><div class="t">Tipo 1</div><div class="d" style="margin:0">2 alcobas · 2 baños · balcón</div></div></div>
       </div>
@@ -169,37 +168,39 @@ h2 em{font-style:normal;color:var(--gold)}
 
 <!-- ============ AD C · DECISIÓN EN FAMILIA (4:5 y 9:16) ============ -->
 <section class="c f45" id="C45">
-  <img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-4.jpg" style="object-position:50% 30%">
-  <div class="shadeT"></div><div class="shade" style="background:linear-gradient(180deg,rgba(20,33,61,0) 30%,rgba(20,33,61,.8) 52%,rgba(20,33,61,.97) 100%)"></div>
-  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
-  <div class="tag">Vivienda propia</div>
-  <div class="bottom">
-    <h2>Comprar vivienda se decide en familia. <em>Te acompañamos en cada paso.</em></h2>
-    <div class="trust">
-      <div><span>1</span>Asesoría para tu crédito con el banco que elijas</div>
-      <div><span>2</span>Recursos protegidos en fiducia · Credicorp Capital</div>
-      <div><span>3</span>Conoce el apartamento modelo antes de decidir</div>
+  <div class="split">
+    <div class="top" style="height:50%"><img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-5.jpg" style="object-position:55% 55%"><div class="shadeT"></div>
+      <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png"><div class="tag">Vivienda propia</div>
+      <div class="real" style="top:auto;bottom:24px"><i></i>FOTO REAL · APARTAMENTO MODELO</div></div>
+    <div class="bot" style="padding-top:48px">
+      <h2 style="font-size:56px">Comprar vivienda se decide en familia. <em>Te acompañamos en cada paso.</em></h2>
+      <div class="trust">
+        <div><span>1</span>Asesoría para tu crédito con el banco que elijas</div>
+        <div><span>2</span>Recursos protegidos en fiducia · Credicorp Capital</div>
+        <div><span>3</span>Conoce el apartamento modelo antes de decidir</div>
+      </div>
+      <div class="cta">Agenda tu visita →</div>
     </div>
-    <div class="cta">Agenda tu visita →</div>
   </div>
-  <div class="legal">Proyecto NO VIS. Precios desde $530M* sujetos a disponibilidad.</div>
+  <div class="legal" style="bottom:20px">Proyecto NO VIS. Precios desde $530M* sujetos a disponibilidad. Amoblamiento sugerido.</div>
 </section>
 
 <section class="c f916" id="C916">
-  <img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-4.jpg" style="object-position:50% 30%">
-  <div class="shadeT"></div><div class="shade" style="background:linear-gradient(180deg,rgba(20,33,61,0) 34%,rgba(20,33,61,.82) 52%,rgba(20,33,61,.97) 100%)"></div>
-  <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png">
-  <div class="tag">Vivienda propia</div>
-  <div class="bottom">
-    <h2 style="font-size:76px">Comprar vivienda se decide en familia. <em>Te acompañamos en cada paso.</em></h2>
-    <div class="trust">
-      <div><span>1</span>Asesoría para tu crédito con el banco que elijas</div>
-      <div><span>2</span>Recursos en fiducia · Credicorp Capital</div>
-      <div><span>3</span>Visita el apartamento modelo</div>
+  <div class="split">
+    <div class="top" style="height:48%"><img class="ph" src="../../../assets/fotos-web/kassaapartamentos/PC-5.jpg" style="object-position:55% 55%"><div class="shadeT"></div>
+      <img class="logo" src="../../../assets/fotos-web/kassaapartamentos/Logo_Site.png"><div class="tag">Vivienda propia</div>
+      <div class="real" style="top:auto;bottom:24px"><i></i>FOTO REAL · APARTAMENTO MODELO</div></div>
+    <div class="bot" style="padding-top:48px">
+      <h2 style="font-size:80px">Comprar vivienda se decide en familia. <em>Te acompañamos en cada paso.</em></h2>
+      <div class="trust">
+        <div><span>1</span>Asesoría para tu crédito con el banco que elijas</div>
+        <div><span>2</span>Recursos protegidos en fiducia · Credicorp Capital</div>
+        <div><span>3</span>Conoce el apartamento modelo antes de decidir</div>
+      </div>
+      <div class="cta">Agenda tu visita →</div>
     </div>
-    <div class="cta">Agenda tu visita →</div>
   </div>
-  <div class="legal">Proyecto NO VIS. Precios desde $530M* sujetos a disponibilidad.</div>
+  <div class="legal" style="bottom:110px">Proyecto NO VIS. Precios desde $530M* sujetos a disponibilidad. Amoblamiento sugerido.</div>
 </section>
 
 <!-- ============ AD D · REEL 9:16 (frames para video) ============ -->
@@ -239,7 +240,7 @@ h2 em{font-style:normal;color:var(--gold)}
   <div class="big" style="text-align:center">
     <div class="kick">Colina Campestre · Bogotá</div>
     <h1 style="font-size:104px">Desde <em>$530M*</em></h1>
-    <div class="sub" style="font-size:38px">45 a 59 m² · Reserva con $5.000.000</div>
+    <div class="sub" style="font-size:38px">54 a 59 m² · Reserva con $5.000.000</div>
     <div class="cta" style="font-size:38px;padding:28px 44px">Agenda tu visita →</div>
   </div>
   <div class="legal" style="text-align:center">*Precio sujeto a disponibilidad y cambios sin previo aviso.</div>
