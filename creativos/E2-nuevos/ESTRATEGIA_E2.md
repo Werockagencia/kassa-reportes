@@ -95,3 +95,18 @@
 - [ ] Confirmar precio de entrada: la web dice **$356M** y los anuncios **$530M**.
 - [ ] Confirmar valor de separación: la web dice **$3M** y E1 dice **$5M**.
 - [ ] Confirmar que se puede mencionar a **Credicorp Capital** (aparece en kassa129.com) y que el apartamento modelo está abierto para visitas.
+
+## Siguiente paso: publicar los anuncios de E2 (nota del 13 oct 2026)
+
+### Ajustes ya decididos
+- Ubicaciones: **solo Instagram** (feed, historias y reels). En E2, Facebook costó $36.647 por lead en septiembre y $35.639 en octubre.
+- Audiencia: **excluir 55–64 años**. El núcleo que convierte son mujeres de 35 a 54 años (73–78% de los leads son mujeres).
+- Tipología: **el Tipo 3 (45 m²) ya no está disponible**; las piezas comunican 54–59 m² (Tipo 1 y Tipo 2).
+- Pieza C: montaje con pareja de stock (Unsplash, Omar Lopez, licencia libre), marcada "Imagen de referencia".
+
+### Nicho nuevo: sector salud
+Kassa está cerca de **Clínica Reina Sofía, Clínica La Colina y Colmédica** (fuente: kassa129.com). Su personal (médicos, enfermería, administrativos) es una audiencia natural: vive cerca de su trabajo, tiene ingresos estables y suele calificar para crédito.
+- **Segmentación propuesta:** un conjunto de anuncios aparte dentro de E2, con intereses de salud (medicina, enfermería, hospitales, profesionales de la salud) en un radio de unos 3–5 km de la Calle 129 # 57-22. Hay que comparar su CPL contra el conjunto general.
+- **Ángulo del mensaje:** "Vive a minutos de tu clínica". Pieza sugerida: una variante de B o C con ese titular y los tiempos a cada clínica (validar los minutos reales con el cliente antes de publicar).
+- **Cuidado:** no conviene partir demasiado el presupuesto, porque E1 ya está en "Aprendizaje limitado". Si se abre este conjunto, que el general conserve al menos el 60–70% del presupuesto de E2.
+- **Pendiente con el cliente:** confirmar si ya tienen convenios o acercamientos con esas clínicas, que servirían para el copy y para acciones fuera de Meta.
