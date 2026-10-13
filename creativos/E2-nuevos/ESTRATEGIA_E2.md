@@ -110,3 +110,11 @@ Kassa está cerca de **Clínica Reina Sofía, Clínica La Colina y Colmédica** 
 - **Ángulo del mensaje:** "Vive a minutos de tu clínica". Pieza sugerida: una variante de B o C con ese titular y los tiempos a cada clínica (validar los minutos reales con el cliente antes de publicar).
 - **Cuidado:** no conviene partir demasiado el presupuesto, porque E1 ya está en "Aprendizaje limitado". Si se abre este conjunto, que el general conserve al menos el 60–70% del presupuesto de E2.
 - **Pendiente con el cliente:** confirmar si ya tienen convenios o acercamientos con esas clínicas, que servirían para el copy y para acciones fuera de Meta.
+
+### Reglas de presupuesto y género (indicación del 13 oct 2026)
+- **Tope: $1.500.000 COP al mes para toda la cuenta (E1 + E2).** Octubre: $476.732 gastados al día 13, así que quedan ~$1.023.000 (~$57K/día). Desde noviembre son ~$50K/día, repartidos entre estrategias y conjuntos. Conviene usar presupuesto de campaña o tope de gasto por campaña para no pasarse. *(Confirmar con el usuario si el tope incluye las dos estrategias.)*
+- **Inversión 50% mujeres / 50% hombres.** Al 13 de octubre la inversión va 73% en mujeres y 27% en hombres, porque el algoritmo la inclina sola. Meta no permite fijar un porcentaje dentro de un conjunto, así que:
+  - Se crea un conjunto **Mujeres** y otro **Hombres** por estrategia, con el **mismo presupuesto diario**.
+  - El sexo va como **control de audiencia obligatorio**, no como sugerencia de Advantage+, porque si no Meta lo ignora.
+  - Antecedente: en septiembre los hombres costaron $19.085 por lead y las mujeres $19.860 (iguales). En octubre los hombres de E2 no generaron leads con $61K. Revisar el día 7 y el día 14.
+- **Ojo con la fragmentación:** con la división por sexo, más el conjunto de salud, más E1, el presupuesto queda muy partido para $50K/día y el aprendizaje se frena (E1 ya está en "Aprendizaje limitado"). Propuesta para E2: dos conjuntos (mujeres y hombres) y el nicho de salud como **segmentación dentro de esos dos**, no como un tercer conjunto, salvo que se suba el presupuesto.
