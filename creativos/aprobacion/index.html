@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kassa Aprobación Creativos</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14213D;--blue:#2F6BE0;--gold:#FFAA00;--ink:#0F172A;--mut:#64748B;--line:#E2E8F0;--soft:#F5F6F9;--bg:#E9ECF2}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B0F17}}
+:root[data-theme="dark"]{--bg:#0B0F17}
+@page{size:794px 1123px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);font-family:Montserrat,Helvetica,Arial,sans-serif;color:var(--ink);font-size:12px;line-height:1.5}
+.page{width:794px;height:1123px;margin:24px auto;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.1)}
+@media print{body{background:#fff}.page{margin:0;box-shadow:none;break-after:page}.page:last-child{break-after:auto}}
+@media screen and (max-width:830px){.page{width:auto;height:auto;min-height:0;margin:12px 16px;padding-bottom:60px}.g2,.g5,.chk{grid-template-columns:1fr!important}}
+.hd{background:var(--navy);color:#fff;padding:22px 48px;display:flex;align-items:center;gap:18px}
+.hd img{width:110px}.hd h2{font-size:16px;font-weight:800;letter-spacing:.02em}.hd p{color:#AFC0DB;font-size:11px}
+.hd .n{margin-left:auto;background:var(--gold);color:var(--navy);font-weight:900;font-size:20px;width:44px;height:44px;border-radius:12px;display:grid;place-items:center}
+.bd{padding:24px 48px 70px}
+.ft{position:absolute;left:0;right:0;bottom:0;padding:12px 48px;font-size:9px;color:var(--mut);border-top:1px solid var(--line);display:flex;justify-content:space-between}
+.k{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:18px 0 8px}
+.lead{font-size:12.5px;color:#334155}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.g5 img,.g2 img,.reel img{width:100%;display:block;border-radius:6px;box-shadow:0 2px 10px rgba(15,23,42,.15)}
+.g2{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
+.cap{font-size:9.5px;color:var(--mut);margin-top:4px;text-align:center}
+.copy{background:var(--soft);border-left:4px solid var(--gold);border-radius:8px;padding:12px 14px;white-space:pre-wrap;font-size:11px;line-height:1.55}
+.meta{display:grid;grid-template-columns:110px 1fr;gap:4px 10px;font-size:11px;margin-top:10px}
+.meta b{color:var(--mut);font-weight:600}
+.why{background:#EEF4FF;border-radius:8px;padding:10px 14px;font-size:11px;color:#1E3A8A;margin-top:12px}
+.reel{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.cv{background:var(--navy);color:#fff}
+.cv .in{padding:120px 64px 0}
+.cv img.lg{width:240px}
+.cv .kk{color:var(--gold);font-weight:800;letter-spacing:.16em;font-size:12px;margin-top:70px}
+.cv h1{font-size:46px;font-weight:900;line-height:1.05;margin-top:14px;letter-spacing:-.02em}
+.cv h1 em{font-style:normal;color:var(--gold)}
+.cv .sub{color:#C7D2E5;font-size:14px;margin-top:18px;max-width:560px}
+.cv .list{margin-top:44px;display:grid;gap:10px}
+.cv .list div{display:flex;gap:14px;align-items:center;background:rgba(255,255,255,.07);border-radius:10px;padding:12px 16px;font-size:13px}
+.cv .list span{flex:none;width:30px;height:30px;border-radius:8px;background:var(--gold);color:var(--navy);font-weight:900;display:grid;place-items:center}
+.cv .thumbs{position:absolute;right:-40px;bottom:120px;display:flex;gap:12px;transform:rotate(-6deg)}
+.cv .thumbs img{width:150px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.4);border:4px solid #fff}
+.cv .date{position:absolute;left:64px;bottom:50px;color:#AFC0DB;font-size:11px}
+table{width:100%;border-collapse:collapse;font-size:11px}
+th{background:var(--navy);color:#fff;text-align:left;padding:8px 10px;font-weight:700}
+td{border-bottom:1px solid var(--line);padding:9px 10px;vertical-align:top}
+.box{display:inline-block;width:14px;height:14px;border:1.5px solid var(--ink);border-radius:3px;vertical-align:middle;margin-right:6px}
+.chk{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:26px}
+.line{border-bottom:1px solid var(--ink);height:34px}
+.lbl{font-size:10px;color:var(--mut);margin-top:4px}
+.warn{background:#FEF9E7;border-left:4px solid var(--gold);border-radius:8px;padding:10px 14px;font-size:11px}
+</style></head><body>
+
+<!-- PORTADA -->
+<section class="page cv"><div class="in">
+  <img class="lg" src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" alt="KASSA">
+  <div class="kk">Estrategia 2 · Octubre 2026</div>
+  <h1>Aprobación de<br><em>nuevos anuncios</em></h1>
+  <p class="sub">Cuatro piezas nuevas para la Estrategia 2, hechas con fotos reales del apartamento modelo. Los precios y condiciones son los mismos de los anuncios actuales. Por favor revisen cada pieza y marquen su aprobación en la última página.</p>
+  <div class="list">
+    <div><span>A</span>Carrusel · Recorre el apartamento modelo (5 tarjetas)</div>
+    <div><span>B</span>Tipologías y precio · Feed e historias</div>
+    <div><span>C</span>Decisión en familia · Feed e historias</div>
+    <div><span>D</span>Reel de 12 segundos</div>
+  </div>
+</div>
+<div class="thumbs"><img src="img/E2-A-carrusel-01.jpg" alt=""><img src="img/E2-C-familia-4x5.jpg" alt=""><img src="img/E2-B-tipologias-4x5.jpg" alt=""></div>
+<div class="date">KASSA Apartamentos · Calle 129 # 57-22, Colina Campestre, Bogotá · 13 de octubre de 2026</div>
+</section>
+
+<!-- A -->
+<section class="page">
+  <div class="hd"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" alt="KASSA"><div><h2>CARRUSEL · RECORRE EL APARTAMENTO MODELO</h2><p>Feed de Instagram · 5 tarjetas · 1080 × 1350</p></div><div class="n">A</div></div>
+  <div class="bd">
+    <div class="g5">
+      <div><img src="img/E2-A-carrusel-01.jpg" alt=""><div class="cap">1 · Portada</div></div>
+      <div><img src="img/E2-A-carrusel-02.jpg" alt=""><div class="cap">2 · Cocina</div></div>
+      <div><img src="img/E2-A-carrusel-03.jpg" alt=""><div class="cap">3 · Alcoba principal</div></div>
+      <div><img src="img/E2-A-carrusel-04.jpg" alt=""><div class="cap">4 · Segunda alcoba</div></div>
+      <div><img src="img/E2-A-carrusel-05.jpg" alt=""><div class="cap">5 · Zonas comunes + visita</div></div>
+    </div>
+    <div class="k">Texto del anuncio</div>
+<div class="copy">Así se ve tu próximo hogar en Colina Campestre 🏡 Fotos reales de nuestro apartamento modelo: cocina abierta con vista, alcoba principal con baño privado y balcón, y espacios que crecen con tu familia.
+
+📐 Apartamentos de 54 a 59 m²
+💰 Desde $530 millones* · Reserva con $5.000.000
+📍 Calle 129 # 57-22, a 10 minutos de todo
+
+👉 Déjanos tus datos y un asesor te agenda una visita al apartamento modelo.</div>
+    <div class="meta">
+      <b>Títulos</b><span>1 Recorre el apartamento modelo · 2 Cocina abierta con vista · 3 Alcoba con baño y balcón · 4 Espacio para tu familia · 5 Agenda tu visita</span>
+      <b>Descripción</b><span>Desde $530M* · Colina Campestre</span>
+      <b>Botón</b><span>Más información → formulario</span>
+    </div>
+    <div class="why"><b>Objetivo:</b> mostrar el apartamento real tarjeta por tarjeta. Las fotos reales dan confianza a quien compra sobre planos, y el carrusel es el formato que mejor ha funcionado en la cuenta.</div>
+  </div>
+  <div class="ft"><span>KASSA Apartamentos · Aprobación de creativos · Estrategia 2</span><span>2</span></div>
+</section>
+
+<!-- B -->
+<section class="page">
+  <div class="hd"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" alt="KASSA"><div><h2>TIPOLOGÍAS Y PRECIO</h2><p>Feed 1080 × 1350 · Historias y reels 1080 × 1920</p></div><div class="n">B</div></div>
+  <div class="bd">
+    <div class="g2">
+      <div><img src="img/E2-B-tipologias-4x5.jpg" alt=""><div class="cap">Feed 4:5</div></div>
+      <div><img src="img/E2-B-tipologias-9x16.jpg" alt="" style="width:78%;margin:0 auto"><div class="cap">Historias / Reels 9:16</div></div>
+    </div>
+    <div class="k">Texto del anuncio</div>
+<div class="copy">¿Cuántos metros necesitas? En KASSA eliges:
+▪️ 54–56 m² · 2 alcobas, o alcoba con baño + estudio
+▪️ 58–59 m² · 2 alcobas y 2 baños
+
+Todos con balcón, gimnasio, coworking, BBQ y zona infantil. Desde $530 millones*.
+👉 Cotiza la tipología que más te sirve.</div>
+    <div class="meta"><b>Título</b><span>Elige el tamaño de tu próximo hogar</span><b>Botón</b><span>Obtener cotización → formulario</span></div>
+    <div class="why"><b>Objetivo:</b> mostrar metraje y precio de entrada desde el primer vistazo, para que lleguen al formulario personas que ya saben qué buscan.</div>
+  </div>
+  <div class="ft"><span>KASSA Apartamentos · Aprobación de creativos · Estrategia 2</span><span>3</span></div>
+</section>
+
+<!-- C -->
+<section class="page">
+  <div class="hd"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" alt="KASSA"><div><h2>DECISIÓN EN FAMILIA</h2><p>Feed 1080 × 1350 · Historias y reels 1080 × 1920</p></div><div class="n">C</div></div>
+  <div class="bd">
+    <div class="g2">
+      <div><img src="img/E2-C-familia-4x5.jpg" alt=""><div class="cap">Feed 4:5</div></div>
+      <div><img src="img/E2-C-familia-9x16.jpg" alt="" style="width:78%;margin:0 auto"><div class="cap">Historias / Reels 9:16</div></div>
+    </div>
+    <div class="k">Texto del anuncio</div>
+<div class="copy">Comprar vivienda se decide en familia, y nadie debería hacerlo solo. En KASSA te acompañamos:
+✅ Asesoría para tu crédito hipotecario con el banco que elijas
+✅ Recursos protegidos en fiducia con Credicorp Capital
+✅ Visita al apartamento modelo antes de decidir
+
+Apartamentos de 54 a 59 m² en Colina Campestre, desde $530 millones*.
+👉 Agenda tu visita.</div>
+    <div class="meta"><b>Título</b><span>Te acompañamos en cada paso</span><b>Botón</b><span>Más información → formulario</span></div>
+    <div class="why"><b>Objetivo:</b> que el comprador de vivienda propia se vea reflejado. La foto del apartamento es real; la foto de la pareja es una imagen de referencia de banco de imágenes con licencia libre para uso comercial, marcada como tal en la pieza.</div>
+  </div>
+  <div class="ft"><span>KASSA Apartamentos · Aprobación de creativos · Estrategia 2</span><span>4</span></div>
+</section>
+
+<!-- D -->
+<section class="page">
+  <div class="hd"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" alt="KASSA"><div><h2>REEL · 12 SEGUNDOS</h2><p>Historias y reels 1080 × 1920 · MP4 · sin audio obligatorio</p></div><div class="n">D</div></div>
+  <div class="bd">
+    <div class="reel">
+      <div><img src="img/reel-1.jpg" alt=""><div class="cap">0–2 s · Gancho</div></div>
+      <div><img src="img/reel-2.jpg" alt=""><div class="cap">2–4 s · Cocina</div></div>
+      <div><img src="img/reel-3.jpg" alt=""><div class="cap">4–6 s · Alcobas</div></div>
+      <div><img src="img/reel-4.jpg" alt=""><div class="cap">6–8 s · Zonas comunes</div></div>
+      <div><img src="img/reel-5.jpg" alt=""><div class="cap">8–10 s · Ubicación</div></div>
+      <div><img src="img/reel-6.jpg" alt=""><div class="cap">10–12 s · Precio y visita</div></div>
+    </div>
+    <div class="k">Texto del anuncio</div>
+<div class="copy">¿Buscas apartamento en el norte de Bogotá? 👀 Mira cómo se ve KASSA por dentro: fotos reales de nuestro apartamento modelo en Colina Campestre. Desde $530M* · 54 a 59 m² · Reserva con $5M. 👉 Agenda tu visita.</div>
+    <div class="meta"><b>Título</b><span>Conoce el apartamento modelo</span><b>Botón</b><span>Más información → formulario</span></div>
+    <div class="why"><b>Objetivo:</b> mantener el formato de video, pero con una pregunta directa en el primer segundo, textos que se leen sin sonido y un cierre con precio y llamado a la visita.</div>
+    <div class="k">Archivos en alta resolución</div>
+    <p class="lead">Todas las piezas en alta resolución (PNG) y el video (MP4) se envían adjuntos en un archivo ZIP junto con este documento.</p>
+  </div>
+  <div class="ft"><span>KASSA Apartamentos · Aprobación de creativos · Estrategia 2</span><span>5</span></div>
+</section>
+
+<!-- APROBACIÓN -->
+<section class="page">
+  <div class="hd"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" alt="KASSA"><div><h2>CONFIRMACIONES Y APROBACIÓN</h2><p>Por favor completar y devolver</p></div><div class="n">✓</div></div>
+  <div class="bd">
+    <div class="k">Datos a confirmar antes de publicar</div>
+    <table>
+      <tr><th style="width:34%">Dato</th><th>Situación actual</th><th style="width:30%">Confirmación</th></tr>
+      <tr><td><b>Precio de entrada</b></td><td>La web dice "desde $356M" y los anuncios "desde $530M"</td><td></td></tr>
+      <tr><td><b>Valor de separación</b></td><td>La web dice $3.000.000 y los anuncios $5.000.000</td><td></td></tr>
+      <tr><td><b>Tipologías disponibles</b></td><td>Se comunican Tipo 1 (58–59 m²) y Tipo 2 (54–56 m²). Tipo 3 agotado</td><td></td></tr>
+      <tr><td><b>Mención de Credicorp Capital</b></td><td>Pieza C: "Recursos protegidos en fiducia con Credicorp Capital"</td><td></td></tr>
+      <tr><td><b>Visitas al apartamento modelo</b></td><td>Las piezas invitan a agendar una visita. ¿Está disponible? ¿Qué días y horarios?</td><td></td></tr>
+      <tr><td><b>Tiempo a clínicas cercanas</b></td><td>Para una pieza dirigida al sector salud: minutos a Clínica Reina Sofía, La Colina y Colmédica</td><td></td></tr>
+    </table>
+
+    <div class="k">Aprobación por pieza</div>
+    <table>
+      <tr><th style="width:34%">Pieza</th><th>Aprobada</th><th>Con cambios</th><th style="width:38%">Comentarios</th></tr>
+      <tr><td><b>A</b> · Carrusel apartamento modelo</td><td><span class="box"></span></td><td><span class="box"></span></td><td></td></tr>
+      <tr><td><b>B</b> · Tipologías y precio</td><td><span class="box"></span></td><td><span class="box"></span></td><td></td></tr>
+      <tr><td><b>C</b> · Decisión en familia</td><td><span class="box"></span></td><td><span class="box"></span></td><td></td></tr>
+      <tr><td><b>D</b> · Reel 12 segundos</td><td><span class="box"></span></td><td><span class="box"></span></td><td></td></tr>
+    </table>
+
+    <div class="warn" style="margin-top:18px"><b>Nota legal incluida en las piezas:</b> *Precio sujeto a disponibilidad y cambios sin previo aviso. Imágenes del apartamento modelo con amoblamiento sugerido. La foto de la pareja (pieza C) es una imagen de referencia de Unsplash (Elissa Garcia), con licencia libre para uso comercial.</div>
+
+    <div class="chk">
+      <div><div class="line"></div><div class="lbl">Nombre y firma</div></div>
+      <div><div class="line"></div><div class="lbl">Fecha</div></div>
+    </div>
+  </div>
+  <div class="ft"><span>KASSA Apartamentos · Aprobación de creativos · Estrategia 2</span><span>6</span></div>
+</section>
+</body></html>

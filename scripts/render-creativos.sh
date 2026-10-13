@@ -36,10 +36,10 @@ for i in $(seq 1 $n); do
   args+=(-i "_reel-frame-$i.png")
   filt+="[$((i-1)):v]scale=1188:2112,zoompan=z='min(zoom+0.0009,1.08)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=75:s=1080x1920:fps=30,setsar=1[v$i];"
 done
-prev="v1"; off=$d
+prev="v1"; step=1.98; off=$step
 for i in $(seq 2 $n); do
   filt+="[$prev][v$i]xfade=transition=fade:duration=0.4:offset=$off[x$i];"
-  prev="x$i"; off=$(awk "BEGIN{print $off+$d}")
+  prev="x$i"; off=$(awk "BEGIN{print $off+$step}")
 done
 ffmpeg -v error -y "${args[@]}" -filter_complex "${filt%;}" -map "[$prev]" -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart E2-D-reel-9x16.mp4
 echo "ok reel"
