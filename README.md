@@ -8,6 +8,7 @@ Cliente: **KASSA Apartamentos**, Calle 129 # 57-22, Colina Campestre, Bogotá ·
 | 9 sep 2026 | May 1 – Sep 9 | `reportes/2026-09-09/` |
 | 24 sep 2026 | Sep 1 – Sep 24 | `reportes/2026-09-24/` |
 | 9 oct 2026 | Sep 25 – Oct 8 | `reportes/2026-10-09/` |
+| 13 oct 2026 (sesión movida) | Sep 25 – Oct 12 | `reportes/2026-10-13/` |
 | **24 oct 2026** | Oct 9 – Oct 23 | `reportes/2026-10-24/` (siguiente) |
 
 ## Proceso de cada corte
