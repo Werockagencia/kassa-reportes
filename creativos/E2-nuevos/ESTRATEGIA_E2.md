@@ -118,3 +118,22 @@ Kassa está cerca de **Clínica Reina Sofía, Clínica La Colina y Colmédica** 
   - El sexo va como **control de audiencia obligatorio**, no como sugerencia de Advantage+, porque si no Meta lo ignora.
   - Antecedente: en septiembre los hombres costaron $19.085 por lead y las mujeres $19.860 (iguales). En octubre los hombres de E2 no generaron leads con $61K. Revisar el día 7 y el día 14.
 - **Ojo con la fragmentación:** con la división por sexo, más el conjunto de salud, más E1, el presupuesto queda muy partido para $50K/día y el aprendizaje se frena (E1 ya está en "Aprendizaje limitado"). Propuesta para E2: dos conjuntos (mujeres y hombres) y el nicho de salud como **segmentación dentro de esos dos**, no como un tercer conjunto, salvo que se suba el presupuesto.
+
+### ✅ Decisiones confirmadas por el usuario (13 oct 2026), aplicar al montar
+1. **Tope de $1.500.000 COP al mes para toda la cuenta (E1 + E2).**
+2. **Inversión 50% mujeres / 50% hombres en las dos estrategias.**
+3. **Incluir a la gente del sector salud** (Clínica Reina Sofía, La Colina, Colmédica).
+
+### Estructura propuesta
+| Campaña | Conjunto | Sexo (control obligatorio) | Edad | Segmentación | Presupuesto nov (~$50K/día) | Resto de oct (~$57K/día) |
+|---|---|---|---|---|---|---|
+| E1 | E1 · Mujeres | Mujeres | 25–54 | Igual que hoy | ~$12.500/día | ~$14.200/día |
+| E1 | E1 · Hombres | Hombres | 25–54 | Igual que hoy | ~$12.500/día | ~$14.200/día |
+| E2 | E2 · Mujeres · Salud+ | Mujeres | 25–54 | Intereses de salud como **sugerencia** (con ampliación de segmentación activada) + radio cerca de la Calle 129 | ~$12.500/día | ~$14.200/día |
+| E2 | E2 · Hombres · Salud+ | Hombres | 25–54 | Igual que el anterior | ~$12.500/día | ~$14.200/día |
+
+- **Salud dentro de E2 y no como conjunto aparte:** el interés de salud funciona como señal prioritaria, pero Meta puede ampliar si encuentra mejores resultados. Así no se fragmenta más el presupuesto y E2, que trae al comprador de vivienda propia, lleva el ángulo de salud.
+- **Creativos:** E1 sigue con su carrusel. E2 lleva A, B, C y D, más una variante "Vive a minutos de tu clínica" (pendiente: confirmar los minutos reales a cada clínica).
+- **Ubicaciones:** E1 en Facebook e Instagram (en E1 rinden parecido). E2 solo en Instagram.
+- **Riesgo conocido:** a ~$12.500/día por conjunto, cada uno saldrá con "Aprendizaje limitado" (pocas conversiones por semana). Es esperable; lo importante es comparar el CPL entre conjuntos el día 7 y el día 14, y no tocarlos antes.
+- **Lectura del 50/50:** si al día 14 uno de los dos sexos cuesta más del doble por lead, se le presenta al cliente el costo de mantener el equilibrio para que decida.
