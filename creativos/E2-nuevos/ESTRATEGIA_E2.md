@@ -142,6 +142,6 @@ Kassa está cerca de **Clínica Reina Sofía, Clínica La Colina y Colmédica** 
 - Conjunto: "Kassa | Lead Ads | Investent | 18-08-2025 Ad set" (campaña Estrategia 2). Formulario "Kassa - PIX Dic 2026 Enero" y conexión CRM conservados.
 - **Publicados:** E2 | A Carrusel, E2 | B Tipologias, E2 | C Decision en familia (en revisión de Meta al publicar).
 - **Pausado:** Kassa | Estático | Jun 2025 (el video).
-- **En borrador:** E2 | D Reel. Falta música: el flujo de video no ofrece música de Meta (sí existe "Add music" en carrusel).
+- **Publicado:** E2 | D Reel con música integrada al MP4 (Rising Forest, Mixkit, licencia que permite anuncios en línea). Archivo local: creativos/E2-nuevos/meta/. La página de creativos muestra la versión sin audio.
 - **Sin tocar:** borrador "Leads Nueva Torre" (con errores, no es nuestro).
 - **Pendiente, no aplicado:** tope $1,5M/mes (conjuntos con presupuesto total $10M y $30,6M hasta 30 nov), 50/50 por sexo, solo Instagram en E2, excluir 55–64, sector salud.
