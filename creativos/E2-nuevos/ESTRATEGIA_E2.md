@@ -137,3 +137,11 @@ Kassa está cerca de **Clínica Reina Sofía, Clínica La Colina y Colmédica** 
 - **Ubicaciones:** E1 en Facebook e Instagram (en E1 rinden parecido). E2 solo en Instagram.
 - **Riesgo conocido:** a ~$12.500/día por conjunto, cada uno saldrá con "Aprendizaje limitado" (pocas conversiones por semana). Es esperable; lo importante es comparar el CPL entre conjuntos el día 7 y el día 14, y no tocarlos antes.
 - **Lectura del 50/50:** si al día 14 uno de los dos sexos cuesta más del doble por lead, se le presenta al cliente el costo de mantener el equilibrio para que decida.
+
+## Estado del montaje (5 nov 2026)
+- Conjunto: "Kassa | Lead Ads | Investent | 18-08-2025 Ad set" (campaña Estrategia 2). Formulario "Kassa - PIX Dic 2026 Enero" y conexión CRM conservados.
+- **Publicados:** E2 | A Carrusel, E2 | B Tipologias, E2 | C Decision en familia (en revisión de Meta al publicar).
+- **Pausado:** Kassa | Estático | Jun 2025 (el video).
+- **En borrador:** E2 | D Reel. Falta música: el flujo de video no ofrece música de Meta (sí existe "Add music" en carrusel).
+- **Sin tocar:** borrador "Leads Nueva Torre" (con errores, no es nuestro).
+- **Pendiente, no aplicado:** tope $1,5M/mes (conjuntos con presupuesto total $10M y $30,6M hasta 30 nov), 50/50 por sexo, solo Instagram en E2, excluir 55–64, sector salud.
