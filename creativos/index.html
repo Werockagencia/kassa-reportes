@@ -106,22 +106,22 @@ Apartamentos de 54 a 59 m² en Colina Campestre, desde $530 millones*.
 
   
   <section class="c">
-    <div class="sh"><h2><span>D</span>Reel de 12 segundos con música</h2><p>9:16 para Reels e Historias. Gancho en el primer segundo, texto que se entiende sin sonido y cierre con precio y llamado a la acción.</p></div>
+    <div class="sh"><h2><span>D</span>Reel de 12 segundos</h2><p>9:16 para Reels e Historias. Gancho en el primer segundo, texto que se entiende sin sonido y cierre con precio y llamado a la acción.</p></div>
     <div class="grid g3" id="gD"></div>
     <details class="copy"><summary>Copy del anuncio D</summary><pre id="cD">¿Buscas apartamento en el norte de Bogotá? 👀 Mira cómo se ve KASSA por dentro: fotos reales de nuestro apartamento modelo en Colina Campestre. Desde $530M* · 54 a 59 m² · Reserva con $5M. 👉 Agenda tu visita.</pre><button class="btn sm line cp" data-c="cD">Copiar texto</button></details>
   </section>
 </main>
-<footer>*Precio sujeto a disponibilidad y cambios sin previo aviso. Imágenes del apartamento modelo con amoblamiento sugerido. Foto de pareja (pieza C): imagen de referencia de Ketut Subiyanto en Pexels, licencia Pexels. Música del reel: Rising Forest, Mixkit (licencia libre para anuncios en línea). · KASSA Apartamentos</footer>
+<footer>*Precio sujeto a disponibilidad y cambios sin previo aviso. Imágenes del apartamento modelo con amoblamiento sugerido. Foto de pareja (pieza C): imagen de referencia de Ketut Subiyanto en Pexels, licencia Pexels. · KASSA Apartamentos</footer>
 
 <script>
 const P='E2-nuevos/png/', V='E2-nuevos/preview/';
-const card=(f,t,s,thumb,video)=>`<div class="card">${video?`<video src="${P+f}" controls loop playsinline data-hd="${P+f}" data-title="${t}" data-size="${s}"></video>`:`<img src="${V+thumb}" loading="lazy" alt="${t}" data-hd="${P+f}" data-title="${t}" data-size="${s}">`}
+const card=(f,t,s,thumb,video)=>`<div class="card">${video?`<video src="${P+f}" muted loop autoplay playsinline data-hd="${P+f}" data-title="${t}" data-size="${s}"></video>`:`<img src="${V+thumb}" loading="lazy" alt="${t}" data-hd="${P+f}" data-title="${t}" data-size="${s}">`}
   <div class="t">${t}</div><div class="s">${s}</div>
   <div class="b"><button class="btn sm line" onclick="this.closest('.card').querySelector('[data-hd]').click()">🔍 Ver HD</button><a class="btn sm blue" href="${P+f}" download>⬇ Descargar</a></div></div>`;
 gA.innerHTML=[1,2,3,4,5].map(i=>card(`E2-A-carrusel-0${i}.png`,`A · Tarjeta ${i} de 5`,'Feed 4:5 · 1080×1350 PNG',`E2-A-carrusel-0${i}.jpg`)).join('');
 gB.innerHTML=card('E2-B-tipologias-4x5.png','B · Feed','4:5 · 1080×1350 PNG','E2-B-tipologias-4x5.jpg')+card('E2-B-tipologias-9x16.png','B · Historias y Reels','9:16 · 1080×1920 PNG','E2-B-tipologias-9x16.jpg');
 gC.innerHTML=card('E2-C-familia-4x5.png','C · Feed','4:5 · 1080×1350 PNG','E2-C-familia-4x5.jpg')+card('E2-C-familia-9x16.png','C · Historias y Reels','9:16 · 1080×1920 PNG','E2-C-familia-9x16.jpg');
-gD.innerHTML=card('E2-D-reel-9x16.mp4','D · Reel con música','9:16 · 1080×1920 · MP4 12 s',null,true);
+gD.innerHTML=card('E2-D-reel-9x16.mp4','D · Reel','9:16 · 1080×1920 · MP4 12 s',null,true);
 document.querySelectorAll('.cp').forEach(b=>b.onclick=()=>{navigator.clipboard.writeText(document.getElementById(b.dataset.c).innerText).then(()=>{b.textContent='✓ Copiado';setTimeout(()=>b.textContent='Copiar texto',1500)})});
 </script>
 <script src="../assets/lightbox.js"></script>
