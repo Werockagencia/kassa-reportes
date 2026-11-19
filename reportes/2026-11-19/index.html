@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kassa Noviembre Parcial</title>
+<style>
+:root{--bg:#EEF1F5;--paper:#fff;--ink:#0F172A;--mut:#64748B;--line:#E2E8F0;--card:#F3F4F6;--dark:#111827;--dark2:#1F2937;--e1:#1E5FA8;--e2:#D97706;--ok:#059669;--okbg:#ECFDF5;--warn:#B45309;--warnbg:#FEF9E7;--bad:#DC2626;--pur:#7C3AED}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B0F17}}
+:root[data-theme="dark"]{--bg:#0B0F17}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);font-family:Helvetica,Arial,sans-serif;color:var(--ink);font-size:13px;line-height:1.45}
+.page{width:794px;min-height:1123px;margin:24px auto;background:var(--paper);position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+@media screen and (max-width:830px){.page{width:auto;min-height:0;margin:12px 16px}.g4,.g3,.g2{grid-template-columns:1fr 1fr!important}.tbl{font-size:11px}}
+@page{size:794px 1123px;margin:0}@media print{body{background:#fff}.page{margin:0;box-shadow:none;height:1123px;min-height:0;page-break-after:always;break-after:page}.page:last-child{page-break-after:auto;break-after:auto}}
+.hd{background:var(--dark);color:#fff;padding:22px 52px;display:flex;align-items:center;gap:20px}
+.hd .lg{background:#fff;border-radius:4px;padding:8px 14px;width:124px}
+.hd h2{font-size:16px;letter-spacing:.02em}.hd p{color:#94A3B8;font-size:12px}
+.hd .pg{margin-left:auto;color:#94A3B8;font-size:11px}
+.bd{padding:22px 52px 70px}
+.ft{position:absolute;bottom:0;left:0;right:0;background:#F3F4F6;color:var(--mut);text-align:center;font-size:10px;padding:12px}
+.sec{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;margin:20px 0 12px}
+.sec:before{content:"";width:9px;height:26px;background:var(--ok)}
+.sec.b:before{background:var(--e1)}.sec.o:before{background:var(--e2)}.sec.p:before{background:var(--pur)}
+.sec:after{content:"";flex:1;height:1px;background:var(--line)}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.k{background:var(--card);border-radius:8px;padding:12px 14px;border-top:5px solid var(--ok)}
+.k.b{border-color:var(--e1)}.k.o{border-color:var(--e2)}.k.p{border-color:var(--pur)}.k.r{border-color:#E11D48}
+.k .l{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.03em}
+.k .v{font-size:22px;font-weight:700;margin:4px 0 2px}
+.k .s{font-size:10.5px;color:var(--mut)}
+.up{color:var(--ok);font-weight:700}.dn{color:var(--bad);font-weight:700}
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{background:var(--dark);color:#fff;padding:9px 8px;text-align:center;font-weight:700}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl td{padding:8px;border-bottom:1px solid var(--line);text-align:center}
+.tbl tr:nth-child(even) td{background:#F8FAFC}
+.tbl tr.t td{background:#D1FAE5;font-weight:700}
+.e1{color:var(--e1)}.e2{color:var(--e2)}
+.note{border-radius:8px;padding:12px 16px;font-size:12px;margin-top:12px}
+.note.ok{background:var(--okbg)}.note.ok b{color:var(--ok)}
+.note.w{background:var(--warnbg)}.note.w b{color:var(--warn)}
+.note.i{background:#EFF6FF}.note.i b{color:var(--e1)}
+.note.x{background:#FEF2F2}.note.x b{color:var(--bad)}
+.bar{height:22px;background:#E5E7EB;border-radius:12px;position:relative;overflow:hidden}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:12px}
+.brow{display:grid;grid-template-columns:150px 1fr 70px;gap:12px;align-items:center;margin:8px 0;font-size:12px;font-weight:700}
+.chart{background:var(--card);border-radius:8px;padding:14px}
+ul.ck{list-style:none}ul.ck li{padding:5px 0 5px 22px;position:relative;font-size:12.5px}ul.ck li:before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700}
+.step{display:flex;gap:12px;align-items:flex-start;margin:9px 0;font-size:12.5px}
+.step span{flex:none;width:24px;height:24px;border-radius:50%;background:var(--e1);color:#fff;display:grid;place-items:center;font-weight:700;font-size:11px}
+.hl{background:#D1FAE5;border-radius:8px;padding:11px 14px}.hl b{color:var(--ok)}.hl b:first-child{display:block;margin-bottom:3px}
+.op{background:var(--warnbg);border-left:6px solid var(--e2);border-radius:8px;padding:10px 14px;margin:8px 0}
+.op b{display:block}.op p{color:var(--mut);font-size:11.5px}
+.cv{background:var(--dark);color:#fff;min-height:1123px;padding:0}
+.cv .in{padding:250px 64px 0 88px;border-left:26px solid var(--ok);min-height:1123px;position:relative;background:linear-gradient(180deg,#1F2937 0,#1F2937 64%,#111827 64%)}
+.cv .lg{background:#fff;padding:22px 26px;width:244px}
+.cv .kk{color:var(--ok);font-weight:700;font-size:12px;margin-top:46px;letter-spacing:.03em}
+.cv h1{font-size:40px;margin-top:44px}
+.cv .per{color:#94A3B8;margin-top:22px;font-size:14px;padding-bottom:28px;border-bottom:1px solid var(--ok)}
+.cv .ks{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:110px}
+.cv .ks div{background:#1F2937;border-top:6px solid var(--ok);border-radius:8px;padding:12px}
+.cv .ks div:nth-child(2){border-color:#1E5FA8}.cv .ks div:nth-child(3){border-color:var(--e2)}.cv .ks div:nth-child(4){border-color:var(--pur)}
+.cv .ks small{color:#94A3B8;font-size:10px}.cv .ks b{display:block;font-size:20px;margin-top:6px}
+.cv .city{position:absolute;bottom:90px;left:88px;color:var(--ok);font-weight:700;font-size:12px}
+.cv .city span{display:block;color:#94A3B8;font-weight:400;font-size:11px;margin-top:10px}
+.crs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.crs img{width:100%;border-radius:6px;display:block}
+.cr2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.cr2 img{width:100%;border-radius:6px;display:block}
+.cap{font-size:10.5px;color:var(--mut);margin-top:4px}
+svg text{font-family:Helvetica,Arial,sans-serif}
+
+.scr{} @media print{.scr{display:none!important}}
+.gal{display:grid;gap:12px}.gal.g5{grid-template-columns:repeat(5,1fr)}.gal.g2b{grid-template-columns:repeat(2,minmax(0,260px))}
+.gal figure{margin:0;background:var(--card);border-radius:8px;padding:6px;cursor:zoom-in}
+.gal img,.gal video{width:100%;display:block;border-radius:5px}
+.gal figcaption{font-size:11px;font-weight:700;padding:6px 2px 2px}.gal figcaption small{display:block;font-weight:400;color:var(--mut)}
+#galeria{min-height:0}#galeria .bd{padding-bottom:70px}
+.hint{display:inline-block;background:#ECFDF5;color:var(--ok);font-weight:700;font-size:11px;border-radius:20px;padding:4px 10px;margin-left:8px}
+.fab{position:fixed;right:16px;bottom:16px;background:#059669;color:#fff;text-decoration:none;font:700 14px Helvetica,Arial,sans-serif;padding:12px 18px;border-radius:30px;box-shadow:0 6px 20px rgba(0,0,0,.3);z-index:50}
+@media screen and (max-width:830px){.gal.g5{grid-template-columns:repeat(2,1fr)}.gal.g2b{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<!-- 1 PORTADA -->
+
+<section class="page cv"><div class="in">
+  <div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" alt="Kassa" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div>
+  <div class="kk">REPORTE DE MARKETING DIGITAL · AVANCE DEL MES</div>
+  <h1>NOVIEMBRE 2026</h1>
+  <div class="per">Período: 1 – 18 Nov 2026 &nbsp;|&nbsp; Acumulado: May – Nov 2026</div>
+  <div class="ks">
+    <div><small>LEADS NOV</small><b>60</b></div>
+    <div><small>INVERSIÓN</small><b>$852K</b></div>
+    <div><small>CPL</small><b>$14.196</b></div>
+    <div><small>LEADS ACUM</small><b>620</b></div>
+  </div>
+  <div class="city">BOGOTÁ, COLOMBIA<span>Reporte de Marketing Digital · Fuente: Meta Ads Manager</span></div>
+</div></section>
+
+<section class="page">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>RESUMEN GLOBAL DE NOVIEMBRE</h2><p>1 – 18 Nov 2026 · Ambas estrategias</p></div><div class="pg">2/6</div></div>
+  <div class="bd">
+    <div class="sec">Resultados del mes a la fecha</div>
+    <div class="g4">
+      <div class="k"><div class="l">Leads generados</div><div class="v">60</div><div class="s">3,33 por día</div></div>
+      <div class="k b"><div class="l">Inversión</div><div class="v">$851.769</div><div class="s">57% del tope de $1,5M</div></div>
+      <div class="k o"><div class="l">Costo por lead</div><div class="v">$14.196</div><div class="s"><span class="up">↓ 4%</span> vs octubre</div></div>
+      <div class="k p"><div class="l">Clic → lead</div><div class="v">13,5%</div><div class="s">445 clics en el enlace</div></div>
+      <div class="k"><div class="l">Alcance</div><div class="v">11.727</div><div class="s">Suma de ambas estrategias</div></div>
+      <div class="k b"><div class="l">Impresiones</div><div class="v">22.495</div><div class="s">CPM $37.865 <span class="up">(−35%)</span></div></div>
+      <div class="k o"><div class="l">CTR enlace</div><div class="v">1,98%</div><div class="s">Clics (todos): 739</div></div>
+      <div class="k p"><div class="l">Frecuencia</div><div class="v">1,9</div><div class="s">Sin saturación</div></div>
+    </div>
+
+    <div class="sec b">Desglose por estrategia</div>
+    <table class="tbl">
+      <tr><th>Estrategia</th><th>Leads</th><th>Inversión</th><th>CPL</th><th>Alcance</th><th>CPM</th><th>CTR enlace</th><th>Clic→lead</th></tr>
+      <tr><td class="e1"><b>E1</b></td><td>29</td><td>$434.187</td><td><b>$14.972</b></td><td>5.663</td><td>$44.591</td><td>1,92%</td><td>15,5%</td></tr>
+      <tr><td class="e2"><b>E2</b></td><td><b>31</b></td><td>$417.582</td><td><b>$13.470</b></td><td>6.064</td><td>$32.731</td><td><b>2,02%</b></td><td>12,0%</td></tr>
+      <tr class="t"><td>TOTAL</td><td>60</td><td>$851.769</td><td>$14.196</td><td>11.727</td><td>$37.865</td><td>1,98%</td><td>13,5%</td></tr>
+    </table>
+
+    <div class="sec o">Noviembre (1–18) vs octubre completo</div>
+    <table class="tbl">
+      <tr><th>Indicador</th><th>Octubre</th><th>Nov 1–18</th><th>Variación</th></tr>
+      <tr><td>Leads por día</td><td>3,26</td><td>3,33</td><td class="up">+2%</td></tr>
+      <tr><td>CPL total</td><td>$14.850</td><td>$14.196</td><td class="up">−4%</td></tr>
+      <tr><td>CPL E1</td><td>$11.190</td><td>$14.972</td><td class="dn">+34%</td></tr>
+      <tr><td>CPL E2</td><td>$22.061</td><td>$13.470</td><td class="up">−39%</td></tr>
+      <tr><td>CPM</td><td>$58.515</td><td>$37.865</td><td class="up">−35%</td></tr>
+    </table>
+    <div class="note ok"><b>Lectura:</b> E2 pasó de ser la estrategia más costosa a la más eficiente: $13.470 por lead, 39% menos que en octubre, y ya aporta más leads que E1. Al ritmo actual noviembre cerraría cerca de 100 leads con unos $1,42M, dentro del tope.</div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Reporte mensual · Confidencial · Corte al 18 Nov 2026</div>
+</section>
+
+<section class="page">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>EVOLUCIÓN MENSUAL Y ACUMULADO</h2><p>Mayo – Noviembre 2026</p></div><div class="pg">3/6</div></div>
+  <div class="bd">
+    <div class="sec">Acumulado Mayo – 18 Nov 2026</div>
+    <div class="g3">
+      <div class="k"><div class="l">Total leads</div><div class="v">620</div><div class="s">E1: 360 · E2: 260</div></div>
+      <div class="k b"><div class="l">Inversión acumulada</div><div class="v">$10.254.998</div><div class="s">COP en pauta</div></div>
+      <div class="k o"><div class="l">CPL promedio</div><div class="v">$16.540</div><div class="s">Baja desde $16.792 al cierre de octubre</div></div>
+    </div>
+    <div class="sec b">Leads por mes</div>
+    <div class="chart"><svg viewBox="0 0 690 230" width="100%" role="img" aria-label="Leads por mes E1 y E2"><line x1="30" y1="190" x2="680" y2="190" stroke="#E5E7EB"/><g fill="#1E5FA8"><rect x="40" y="86.0" width="62" height="104.0"/><rect x="132" y="136.0" width="62" height="54.0"/><rect x="224" y="125.2" width="62" height="64.8"/><rect x="316" y="121.1" width="62" height="68.9"/><rect x="408" y="125.2" width="62" height="64.8"/><rect x="500" y="99.5" width="62" height="90.5"/><rect x="592" y="150.8" width="62" height="39.2"/></g><g fill="#D97706"><rect x="40" y="30.7" width="62" height="55.4"/><rect x="132" y="83.3" width="62" height="52.7"/><rect x="224" y="86.0" width="62" height="39.2"/><rect x="316" y="64.4" width="62" height="56.7"/><rect x="408" y="65.8" width="62" height="59.4"/><rect x="500" y="53.6" width="62" height="45.9"/><rect x="592" y="109.0" width="62" height="41.9"/></g><g font-size="12" font-weight="700" text-anchor="middle" fill="#0F172A"><text x="71" y="24.7">118</text><text x="163" y="77.3">79</text><text x="255" y="80.0">77</text><text x="347" y="58.4">93</text><text x="439" y="59.8">92</text><text x="531" y="47.6">101</text><text x="623" y="103.0">60</text></g><g font-size="10" font-weight="700" text-anchor="middle" fill="#fff"><text x="71" y="142.0">77</text><text x="71" y="62.4">41</text><text x="163" y="167.0">40</text><text x="163" y="113.7">39</text><text x="255" y="161.6">48</text><text x="255" y="109.6">29</text><text x="347" y="159.6">51</text><text x="347" y="96.8">42</text><text x="439" y="161.6">48</text><text x="439" y="99.5">44</text><text x="531" y="148.8">67</text><text x="531" y="80.6">34</text><text x="623" y="174.4">29</text><text x="623" y="133.9">31</text></g><g font-size="11" fill="#0F172A" text-anchor="middle"><text x="71" y="206">Mayo</text><text x="163" y="206">Junio</text><text x="255" y="206">Julio</text><text x="347" y="206">Agosto</text><text x="439" y="206">Sept.</text><text x="531" y="206">Octubre</text><text x="623" y="206">Nov 1–18</text></g><g font-size="11"><rect x="30" y="216" width="14" height="8" fill="#1E5FA8"/><text x="50" y="224">E1</text><rect x="90" y="216" width="14" height="8" fill="#D97706"/><text x="110" y="224">E2</text></g></svg></div>
+    <div class="sec o">Tabla mensual</div>
+    <table class="tbl">
+      <tr><th>Mes</th><th>Leads E1</th><th>CPL E1</th><th>Leads E2</th><th>CPL E2</th><th>Total</th><th>Inversión</th><th>CPL total</th></tr>
+      <tr><td>Mayo</td><td>77</td><td>$10.196</td><td>41</td><td>$19.546</td><td>118</td><td>$1.586K</td><td>$13.445</td></tr>
+      <tr><td>Junio</td><td>40</td><td>$17.425</td><td>39</td><td>$17.180</td><td>79</td><td>$1.367K</td><td>$17.304</td></tr>
+      <tr><td>Julio</td><td>48</td><td>$15.618</td><td>29</td><td>$25.876</td><td>77</td><td>$1.500K</td><td>$19.482</td></tr>
+      <tr><td>Agosto</td><td>51</td><td>$14.692</td><td>42</td><td>$20.808</td><td>93</td><td>$1.623K</td><td>$17.454</td></tr>
+      <tr><td>Septiembre</td><td>48</td><td>$14.608</td><td>44</td><td>$25.588</td><td>92</td><td>$1.827K</td><td>$19.860</td></tr>
+      <tr><td>Octubre</td><td>67</td><td>$11.190</td><td>34</td><td>$22.061</td><td>101</td><td>$1.500K</td><td>$14.850</td></tr>
+      <tr class="t"><td>Nov 1–18</td><td>29</td><td>$14.972</td><td>31</td><td><b>$13.470</b></td><td>60</td><td>$852K</td><td>$14.196</td></tr>
+    </table>
+    <div class="note i"><b>Lectura:</b> el CPL de E2 en noviembre ($13.470) es el más bajo de E2 en todo el período, y es la primera vez que E2 supera a E1 en leads.</div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Reporte mensual · Confidencial · Noviembre es parcial (18 días)</div>
+</section>
+
+<section class="page">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>DEMOGRAFÍA · EDAD Y SEXO</h2><p>¿Quién dejó sus datos en noviembre?</p></div><div class="pg">4/6</div></div>
+  <div class="bd">
+    <div class="sec">Leads por rango de edad</div>
+    <table class="tbl">
+      <tr><th>Edad</th><th>Leads E1</th><th>CPL E1</th><th>Leads E2</th><th>CPL E2</th><th>Total</th><th>% leads</th></tr>
+      <tr class="t"><td>25–44</td><td>21 <small>(25–34: 8 · 35–44: 13)</small></td><td>$14.952</td><td>19</td><td>$12.473</td><td><b>40</b></td><td><b>67%</b></td></tr>
+      <tr><td>45–54</td><td>8</td><td><b>$13.412</b></td><td>12</td><td>$15.415</td><td>20</td><td>33%</td></tr>
+      <tr><td>55–64</td><td>0</td><td>—</td><td>0</td><td>—</td><td>0</td><td>0%</td></tr>
+    </table>
+
+    <div class="sec o">Sexo</div>
+    <table class="tbl">
+      <tr><th>Sexo</th><th>Leads</th><th>% leads</th><th>Inversión</th><th>% inversión</th><th>CPL</th><th>E1 / E2</th></tr>
+      <tr><td><b>Mujeres</b></td><td>40</td><td>67%</td><td>$615.928</td><td>72%</td><td>$15.398</td><td>18 / 22</td></tr>
+      <tr class="t"><td><b>Hombres</b></td><td>18</td><td>30%</td><td>$216.369</td><td>25%</td><td><b>$12.020</b></td><td>9 / 9</td></tr>
+    </table>
+    <div class="brow"><span>Mujeres · inversión</span><div class="bar"><i style="width:72%;background:var(--e2)"></i></div><span>72%</span></div>
+    <div class="brow"><span>Hombres · inversión</span><div class="bar"><i style="width:25%;background:var(--e1)"></i></div><span>25%</span></div>
+    <div class="note i"><b>Lectura:</b> los hombres vuelven a ser más baratos: $12.020 por lead, 22% menos que las mujeres. En E2 la diferencia es mayor: $9.422 frente a $14.662.</div>
+    <div class="note w"><b>Pendiente:</b> la inversión sigue 72/25 hacia mujeres porque Meta reparte sola dentro de cada conjunto. Para lograr leads parejos hay que separar conjuntos de mujeres y hombres con el mismo presupuesto.</div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Reporte mensual · Confidencial · E2 no separa 25–34 y 35–44 en este corte; Meta no clasificó 2 leads por sexo</div>
+</section>
+
+<section class="page">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>REDES Y CREATIVOS</h2><p>Facebook vs Instagram · Anuncios de E2</p></div><div class="pg">5/6</div></div>
+  <div class="bd">
+    <div class="sec">Total del mes por red</div>
+    <div class="g2">
+      <div class="k b"><div class="l">Facebook</div><div class="v">28 leads · 47%</div><div class="s">$280.240 invertidos · CPL <b>$10.009</b></div></div>
+      <div class="k r"><div class="l">Instagram</div><div class="v">32 leads · 53%</div><div class="s">$569.064 invertidos · CPL $17.783</div></div>
+    </div>
+    <table class="tbl">
+      <tr><th>Estrategia · Red</th><th>Leads</th><th>Inversión</th><th>CPL</th><th>Alcance</th></tr>
+      <tr><td class="e1"><b>E1 · Facebook</b></td><td>9</td><td>$102.096</td><td>$11.344</td><td>2.795</td></tr>
+      <tr><td class="e1"><b>E1 · Instagram</b></td><td>20</td><td>$331.080</td><td>$16.554</td><td>3.157</td></tr>
+      <tr class="t"><td class="e2"><b>E2 · Facebook</b></td><td>19</td><td>$178.144</td><td><b>$9.376</b></td><td>3.473</td></tr>
+      <tr><td class="e2"><b>E2 · Instagram</b></td><td>12</td><td>$237.984</td><td>$19.832</td><td>3.190</td></tr>
+    </table>
+    <div class="sec o">Anuncios de E2</div>
+    <table class="tbl">
+      <tr><th>Anuncio</th><th>Leads</th><th>Inversión</th><th>CPL</th><th>% leads E2</th></tr>
+      <tr class="t"><td><b>D · Reel apartamento modelo</b></td><td><b>29</b></td><td>$358.171</td><td><b>$12.351</b></td><td><b>94%</b></td></tr>
+      <tr><td>A Carrusel · B Tipologías · C Decisión en familia</td><td>2</td><td>$58.878</td><td>—</td><td>6%</td></tr>
+    </table>
+    <div class="note ok"><b>El reel es el motor de E2:</b> 29 de 31 leads a $12.351 cada uno. Meta le asigna la mayor parte del presupuesto porque es el que mejor convierte.</div>
+    <div class="note i"><b>Facebook rinde mejor este mes:</b> $10.009 por lead frente a $17.783 en Instagram. Recomendamos mantener las dos redes en las dos estrategias.</div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Reporte mensual · Confidencial · Audience Network: $2.465, sin leads</div>
+</section>
+
+<section class="page">
+  <div class="hd"><div class="lg"><img src="../../assets/fotos-web/kassaapartamentos/Logo_Site.png" style="width:100%;filter:invert(1) hue-rotate(180deg) saturate(3)"></div><div><h2>CONCLUSIONES Y PLAN</h2><p>Noviembre 2026 · corte al 18</p></div><div class="pg">6/6</div></div>
+  <div class="bd">
+    <div class="sec">Resumen ejecutivo</div>
+    <div class="chart"><ul class="ck">
+      <li><b>60 leads en 18 días</b> (3,33 por día), al ritmo de octubre, con un CPL de <b>$14.196</b>, 4% más bajo.</li>
+      <li><b>E2 se recuperó:</b> 31 leads a $13.470, 39% más barato que en octubre. El reel aporta 29.</li>
+      <li>E1 aportó 29 leads a $14.972, por encima de su costo de octubre ($11.190).</li>
+      <li>Inversión de $851.769, 57% del tope mensual; proyección al cierre: ~100 leads con ~$1,42M.</li>
+      <li>Acumulado May–Nov: <b>620 leads</b> con $10,25M invertidos (CPL $16.540).</li>
+    </ul></div>
+    <div class="sec b">Puntos destacados</div>
+    <div class="g2">
+      <div class="hl"><b>✓ Mejor CPL de E2 del año</b>$13.470 por lead.</div>
+      <div class="hl"><b>✓ CPM 35% más bajo</b>$37.865 frente a $58.515 en octubre.</div>
+      <div class="hl"><b>✓ Reel ganador</b>94% de los leads de E2.</div>
+      <div class="hl"><b>✓ Dentro del tope</b>57% del presupuesto con 60% del mes.</div>
+    </div>
+    <div class="sec o">Plan para el resto de noviembre</div>
+    <div class="step"><span>1</span>Dar prioridad al reel en E2 y preparar una segunda versión, para no depender de un solo anuncio.</div>
+    <div class="step"><span>2</span>Leads parejos entre mujeres y hombres: separar conjuntos por sexo con el mismo presupuesto en E1 y E2.</div>
+    <div class="step"><span>3</span>Revisar E1: su CPL subió 34%. Llevar el formato reel también a E1.</div>
+    <div class="step"><span>4</span>Mantener el tope de $1.500.000 al mes y Facebook + Instagram en las dos estrategias.</div>
+    <div class="step"><span>5</span>Medir el estado de los leads con el equipo comercial (contacto, visita, separación).</div>
+  </div>
+  <div class="ft">Kassa Apartamentos · Reporte mensual · Confidencial · Bogotá, Colombia</div>
+</section>
+</body></html>
